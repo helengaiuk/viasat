@@ -1,0 +1,79 @@
+.movie
+	position: relative
+	display: block
+	text-decoration: none
+	color: #353535
+	.movie__poster
+		position: relative
+		height: 200px
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			display: block
+			width: auto
+			min-height: 100%
+		+r(768)
+			height: auto
+			min-height: 200px
+			img
+				position: relative
+				top: auto
+				left: auto
+				transform: translate(0, 0)
+				width: 100%
+				height: auto
+				min-height: 1px
+	.movie__in
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		+clr
+		background: #fff
+	.movie__channel
+		position: absolute
+		bottom: 100%
+		left: 0
+		right: 0
+		padding: 5px 20px
+		text-align: right
+		color: #fff
+		background: rgba(#fff, 0.5)
+	.movie__left
+		float: left
+		width: 70%
+		padding: 10px 12px
+		font-size: 16px
+		font-weight: 500
+		+r(768)
+			width: 65%
+		+r(480)
+			width: 70%
+	.movie__genre
+		font-style: italic
+		font-size: 14px
+	.movie__right
+		float: right
+		width: 30%
+		padding: 10px 10px 10px 0
+		text-align: center
+		+r(768)
+			width: 35%
+		+r(480)
+			width: 30%
+	.movie__time
+		font-size: 18px
+		font-weight: 500
+	.movie__date
+		font-size: 12px
+		white-space: nowrap
+	@for $i from 1 through length($channels)
+		&.movie_#{nth($channels, $i)}
+			.movie__in
+				background: nth($colors, $i)
+				color: #fff
+			.movie__channel
+				background: rgba(nth($colors, $i), 0.5)

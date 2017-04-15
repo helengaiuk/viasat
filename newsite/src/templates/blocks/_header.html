@@ -1,0 +1,84 @@
+<header class="header">
+    <div class="header__center center">
+        <a href="#" class="header__logo"></a>
+        <button class="header__btn-menu js-menu-btn">
+            {{ mixins.icon('menu') }}
+            {{ mixins.icon('close') }}
+        </button>
+        <div class="header__menu menu js-menu">
+            <div class="menu__list">
+                <div class="menu__item"><a href="#" class="menu__link menu__link_drop">
+                        <div class="menu__icon">{{ mixins.icon('menu') }}</div>
+                        <div class="menu__title">Каналы</div></a>
+                    <div class="menu__drop">
+                        <div class="menu__channels">
+                            <div class="menu__channels-col">
+                                <div class="menu__channels-title">Кино</div>
+                                <div class="menu__channels-list"><a href="#" class="menu__channels-link"><img src="img/channel1.png" class="menu__channels-pic"></a><a href="#" class="menu__channels-link"><img src="img/channel2.png" class="menu__channels-pic"></a><a href="#" class="menu__channels-link"><img src="img/channel3.png" class="menu__channels-pic"></a><a href="#" class="menu__channels-link"><img src="img/channel4.png" class="menu__channels-pic"></a><a href="#" class="menu__channels-link"><img src="img/channel5.png" class="menu__channels-pic"></a><a href="#" class="menu__channels-link"><img src="img/channel6.png" class="menu__channels-pic"></a></div>
+                            </div>
+                            <div class="menu__channels-col">
+                                <div class="menu__channels-title">Познавательные</div>
+                                <div class="menu__channels-list">
+                                    <a href="#" class="menu__channels-link"><img src="img/channel7.png" class="menu__channels-pic"></a>
+                                    <a href="#" class="menu__channels-link"><img src="img/channel9.png" class="menu__channels-pic"></a>
+                                    <a href="#" class="menu__channels-link"><img src="img/channel11.png" class="menu__channels-pic"></a>
+                                    <a href="#" class="menu__channels-link"><img src="img/channel8.png" class="menu__channels-pic"></a>
+                                    <a href="#" class="menu__channels-link"><img src="img/channel10.png" class="menu__channels-pic"></a>
+                                </div>
+                            </div>
+                            <div class="menu__channels-col">
+                                <div class="menu__channels-title">Спорт</div>
+                                <div class="menu__channels-list"><a href="#" class="menu__channels-link"><img src="img/channel12.png" class="menu__channels-pic"></a></div>
+                            </div>
+                        </div>
+                        <div class="menu__premieres">
+                            <div class="menu__premieres-head">Премьеры на каналах</div>
+                            <div class="menu__premieres-row">
+                                {% for i in range(0, 6)  %}
+                                    <div class="menu__premieres-col">
+                                        <a href="#" class="menu__premieres-link">
+                                            <div class="menu__premieres-preview">
+                                                <img src="img/pic1.jpg" class="menu__premieres-pic">
+                                            </div>
+                                            <div class="menu__premieres-title">Бессонная ночь</div>
+                                            <div class="menu__premieres-channel">TV Premium HD</div>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__item"><a href="#" class="menu__link">
+                        <div class="menu__title">Блог</div></a></div>
+                <div class="menu__item"><a href="#" class="menu__link">
+                        <div class="menu__title">Фильмотека</div></a></div>
+                <div class="menu__item"><a href="#" class="menu__link menu__link_red">
+                        <div class="menu__title">Подключить каналы</div></a></div>
+                <div class="menu__item"><a href="#" class="menu__link">
+                        <div class="menu__title">ТВ-гид</div></a></div>
+            </div>
+        </div>
+        <div class="header__time time">
+            <div class="time__cell">
+                <div class="time__icon">{{ mixins.icon('clock') }}</div>
+            </div>
+            <div class="time__cell">
+                <div class="time__wrap">
+                    <div class="time__value">20:24</div>
+                    <div class="time__type">Киев</div>
+                </div>
+                <div class="time__date">27 января</div>
+            </div>
+        </div>
+        <div class="n-search">
+            <button class="n-search__btn js-search">{{ mixins.icon('search') }}</button>
+            <form class="n-search__form js-search-form">
+                <input type="text" class="n-search__input" placeholder="Поиск по сайту">
+                <button type="submit">
+                    {{ mixins.icon('search') }}
+                </button>
+            </form>
+        </div>
+    </div>
+</header>

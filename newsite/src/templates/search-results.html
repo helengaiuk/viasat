@@ -1,0 +1,209 @@
+---
+title: Results
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+movies:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия'
+  country: 'США, 2014'
+results:
+- category: 'новости'
+  title: 'Some title 1'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta est fugit iste, iure laborum libero modi tempora veniam voluptas. A ab alias culpa maiores omnis sunt totam? Ab, voluptate!"
+- category: 'блог'
+  title: 'Some title 2'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa minima obcaecati possimus quisquam voluptatum. Ab accusamus dolores ea fuga nobis non, quae quis rem reprehenderit similique sint temporibus voluptatem voluptates?"
+- category: 'новости'
+  title: 'Some title 3'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolore doloribus eius explicabo ipsa maxime perspiciatis placeat quas quidem quisquam. Aut ea explicabo iusto obcaecati rem tempora. Architecto, consequuntur, eaque?"
+- category: 'блог'
+  title: 'Some title 4'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+- category: 'блог'
+  title: 'Some title 5'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+- category: 'блог'
+  title: 'Some title 4'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+- category: 'блог'
+  title: 'Some title 4'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+- category: 'блог'
+  title: 'Some title 4'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+- category: 'блог'
+  title: 'Some title 4'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+- category: 'блог'
+  title: 'Some title 4'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+- category: 'блог'
+  title: 'Some title 4'
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis culpa deserunt dolorem doloremque eaque eos est et eveniet inventore, perspiciatis quidem repellendus? Consectetur expedita hic laborum magnam, nobis sequi?"
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="container old">
+        <div class="center">
+            <div class="main">
+                <!-- breadcrumbs -->
+                <nav class="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Все телеканалы</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="h1">Результаты поиска <span>(4)</span></h1>
+                <div class="results">
+                    <ol class="results__list">
+                        {% for result in results %}
+                            <li class="result">
+                                <a href="#">
+                                    <div class="result__info">
+                                        <div class="result__category">{{ result.category }}</div>
+                                        <h3>{{ result.title }}</h3>
+                                        <p>{{ result.text }}</p>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                    <div class="more">
+                        <a href="#" class="n-btn n-btn_small n-btn_white">Показать еще</a>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar sidebar_low">
+                <!-- socials -->
+                <div class="socials socials_wide">
+                    <div class="socials__links">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/TV1000UA/"><i class="icon-fb"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://vk.com/tv1000.kino">{{ mixins.icon('vk') }}</a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/tv1000_channels">{{ mixins.icon('instagram') }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="divide"></div>
+                <a href="#" class="subscr">Подпишитесь на анонсы</a>
+                <a href="#" class="feedback">Свяжитесь с нами</a>
+                <!-- widget -->
+                <div class="fb-widget">
+                    <img src="img/fb-widget.jpg" alt="">
+                </div>
+                <!-- banners -->
+                <div class="banner">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+            </aside>
+        </div>
+        {# tvshows #}
+        <div class="tvshows tvshows_gray">
+            <div class="center">
+                <div class="headtitle">ИНТЕРЕСНОЕ НА ЭТОЙ НЕДЕЛЕ</div>
+                <div class="tvshows__slider js-tvshow">
+                    {% for movie in movies %}
+                        <div class="tvshows__item">
+                            <a href="#" class="movie movie_{{ movie.color }}">
+                                <div class="movie__poster">
+                                    <img src="{{ movie.img }}" alt="">
+                                </div>
+                                <div class="movie__in">
+                                    <div class="movie__channel">{{ movie.channel }}</div>
+                                    <div class="movie__left">
+                                        <div class="movie__title js-ellip">{{ movie.title }}</div>
+                                        <div class="movie__genre">боевик</div>
+                                    </div>
+                                    <div class="movie__right">
+                                        <div class="movie__time">{{ movie.time }}</div>
+                                        <div class="movie__date">{{ movie.date }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {# section #}
+        <div class="section section_channels">
+            <div class="center">
+                <div class="n-channels">
+                    <div class="n-channels__row js-channels2">
+                        {% for channel in channels %}
+                            <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

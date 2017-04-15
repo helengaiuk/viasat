@@ -1,0 +1,386 @@
+---
+title: Premium HD
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+movies:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия'
+  country: 'США, 2014'
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="container old">
+        <div class="program program_premium">
+            <div class="program__topper">
+                <div class="center">
+                    <!-- breadcrumbs -->
+                    <nav class="breadcrumbs breadcrumbs_white">
+                        <ul>
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#">TV1000 Premium HD</a>
+                            </li>
+                            <li>
+                                <a href="#">Фильмы</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h1 class="h1 h1_white">TV1000 Premium HD</h1>
+                </div>
+                <div class="program__top">
+                    <div class="preview center">
+                        <div class="preview__poster" style="background-image: url(img/sport.jpg);">
+                            <div class="preview__bottom">
+                                <div class="title title_small"><span>ФИЛЬМ ДНЯ</span></div>
+                                <div class="preview__right">
+                                    <p>21:00</p>
+                                    <span>12 Июня</span>
+                                </div>
+                                <div class="preview__left">
+                                    <h2 class="h2 h2_white">Летучий отряд Скотланд-Ярда</h2>
+                                    <p><i>Криминальная драма</i> / Великобритания, 2012</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info info_premium">
+                            <div class="info__in">
+                                <img src="img/channel1.png" width="125" alt="">
+                                <p>Канал TV1000 Action — это более 10 премьер в месяц и 400 фильмов в год. Лучшие подборки из фильмов лидеров кассовых сборов и кино, которые высоко оценены мировым зрителем....</p>
+                                <div class="info__more">
+                                    <a href="#" class="js-popup-btn" data-link="channel-details">ПОДРОБНЕЕ О КАНАЛЕ</a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="info__add">Подключить канал</a>
+                            <div class="n-watch js-watch">
+                                <div class="n-watch__btn js-watch-btn"><span>СМОТРЕТЬ НА</span></div>
+                                <ul class="n-watch__list js-watch-list" style="display: none;">
+                                    <li><a href="#" class="n-watch__link">MEGOGO</a></li>
+                                    <li><a href="#" class="n-watch__link">OLL.TV</a></li>
+                                    <li><a href="#" class="n-watch__link">Divan.TV</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#" class="program__prev">
+                        <i class="icon-prev"></i>
+                    </a>
+                    <a href="#" class="program__next">
+                        <i class="icon-next"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="center">
+                <!-- main -->
+                <div class="main">
+                    <div class="schedule">
+                        <div class="schedule__title">смотрите на канале</div>
+                        <ul class="schedule__list">
+                            <li class="schedule__item">
+                                <a href="#" class="schedule__link">
+                                    <img src="img/img11.jpg" alt="">
+                                    <div class="schedule__overlay">
+                                        <span class="btn">ПОДРОБНЕЕ</span>
+                                    </div>
+                                </a>
+                                <div class="schedule__content js-ellip-cont">
+                                    <div class="schedule__topper js-ellip-top">
+                                        <div class="schedule__left">
+                                            <h3 class="h3 js-ellip">Перед Агентом Интерпола Льюисом Сэлинджером и ассистентом</h3>
+                                            <p class="js-ellip"><i>Криминальный триллер</i></p>
+                                            <p class="js-ellip">США, 2013</p>
+                                        </div>
+                                        <div class="schedule__right">
+                                            <div class="live">В ЭФИРЕ</div>
+                                            <div class="schedule__timing">
+                                                <i class="icon-time"></i>
+                                                Осталось 1ч 32 мин
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="schedule__descr">
+                                        <p class="js-ellip-desc" data-lines="5">Перед Агентом Интерпола Льюисом Сэлинджером и ассистентом по юридическим вопросам Элеонор Витман поставлена задача — предать правосудию один из наиболее могущественных банков мира. Собирая доказательства нелегальных операций, включая отмывание денег, торговлю оружием, вплоть до дестабилизации правительственных структур, агенты проводят расследование от Берлина до Милана Перед Агентом Интерпола Льюисом Сэлинджером и ассистентом по юридическим вопросам Элеонор Витман поставлена задача — предать правосудию один из наиболее могущественных банков мира. Собирая доказательства нелегальных операций, включая отмывание денег, торговлю оружием, вплоть до дестабилизации правительственных структур, агенты проводят расследование от Берлина до Милана</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="schedule__item">
+                                <a href="#" class="schedule__link">
+                                    <img src="img/img11.jpg" alt="">
+                                    <div class="schedule__overlay">
+                                        <span class="btn">ПОДРОБНЕЕ</span>
+                                    </div>
+                                </a>
+                                <div class="schedule__content">
+                                    <div class="schedule__topper">
+                                        <div class="schedule__left">
+                                            <h3 class="h3 js-ellip">Перед Агентом Интерпола Льюисом Сэлинджером и ассистентом</h3>
+                                            <p class="js-ellip" data-lines="1"><i>Криминальный триллер</i></p>
+                                            <p class="js-ellip">США, 2013</p>
+                                        </div>
+                                        <div class="schedule__right">
+                                            <div class="schedule__time">21:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="schedule__item">
+                                <a href="#" class="schedule__link">
+                                    <img src="img/img11.jpg" alt="">
+                                    <div class="schedule__overlay">
+                                        <span class="btn">ПОДРОБНЕЕ</span>
+                                    </div>
+                                </a>
+                                <div class="schedule__content">
+                                    <div class="schedule__topper">
+                                        <div class="schedule__left">
+                                            <h3 class="h3 js-ellip">Интернэшнл</h3>
+                                            <p class="js-ellip" data-lines="1"><i>Криминальный триллер</i></p>
+                                            <p class="js-ellip">США, 2013</p>
+                                        </div>
+                                        <div class="schedule__right">
+                                            <div class="schedule__time">21:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="schedule__item">
+                                <a href="#" class="schedule__link">
+                                    <img src="img/img11.jpg" alt="">
+                                    <div class="schedule__overlay">
+                                        <span class="btn">ПОДРОБНЕЕ</span>
+                                    </div>
+                                </a>
+                                <div class="schedule__content">
+                                    <div class="schedule__topper">
+                                        <div class="schedule__left">
+                                            <h3 class="h3 js-ellip">Интернэшнл</h3>
+                                            <p class="js-ellip" data-lines="1"><i>Криминальный триллер</i></p>
+                                            <p class="js-ellip">США, 2013</p>
+                                        </div>
+                                        <div class="schedule__right">
+                                            <div class="schedule__time">21:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="schedule__item">
+                                <a href="#" class="schedule__link">
+                                    <img src="img/img11.jpg" alt="">
+                                    <div class="schedule__overlay">
+                                        <span class="btn">ПОДРОБНЕЕ</span>
+                                    </div>
+                                </a>
+                                <div class="schedule__content">
+                                    <div class="schedule__topper">
+                                        <div class="schedule__left">
+                                            <h3 class="h3 js-ellip">Интернэшнл</h3>
+                                            <p class="js-ellip" data-lines="1"><i>Криминальный триллер</i></p>
+                                            <p class="js-ellip">США, 2013</p>
+                                        </div>
+                                        <div class="schedule__right">
+                                            <div class="schedule__time">21:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="schedule__more">
+                            <a href="#" class="n-btn"><span>Вся телепрограмма</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar -->
+                <aside class="sidebar">
+                    <!-- socials -->
+                    <div class="socials">
+                        <div class="socials__links">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/TV1000UA/" class="socials__fb"><i class="icon-fb"></i></a>
+                                </li>
+                                <li>
+                                    <a href="http://vk.com/tv1000.kino" class="socials__tw">{{ mixins.icon('vk') }}</a>
+                                </li>
+                                <li>
+                                    <a href="http://instagram.com/tv1000_channels" class="socials__gp">{{ mixins.icon('instagram') }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="socials__likes">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="icon-like"></i><span>713</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icon-dislike"></i><span>3</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <a href="#" class="subscr">Подпишитесь на анонсы</a>
+                    <a href="#" class="feedback">Свяжитесь с нами</a>
+                    
+                    <div class="soc-widgets">
+                        <div id="fb-root"></div>
+                        <script>
+                            (function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
+                        </script>
+                        <div class="fb-page soc-widget" data-href="https://www.facebook.com/TV1000UA" data-width="500" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <div class="fb-xfbml-parse-ignore">
+                                <blockquote cite="https://www.facebook.com/TV1000UA">
+                                    <a href="https://www.facebook.com/TV1000UA">TV1000 Kino</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- <br><br> -->
+                        <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+                        <!-- VK Widget -->
+                        <div id="vk_groups" class="soc-widget"></div>
+                        <script type="text/javascript">
+                            VK.Widgets.Group("vk_groups", {mode: 0, width: "auto", height: "250", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 45595047);
+                        </script>
+                        <!-- <br><br> -->
+                    </div>
+                </aside>
+            </div>
+
+
+
+        </div>
+        {# tvshows #}
+        <div class="tvshows">
+            <div class="center">
+                <div class="headtitle">СМОТРИТЕ НА КАНАЛЕ <strong>TV1000 Premium HD</strong></div>
+                <div class="tvshows__slider js-tvshow">
+                    {% for movie in movies %}
+                        <div class="tvshows__item">
+                            <a href="#" class="movie">
+                                <div class="movie__poster">
+                                    <img src="{{ movie.img }}" alt="">
+                                </div>
+                                <div class="movie__in">
+                                    <div class="movie__left">
+                                        <div class="movie__title js-ellip">{{ movie.title }}</div>
+                                        <div class="movie__genre js-ellip">боевик</div>
+                                    </div>
+                                    <div class="movie__right">
+                                        <div class="movie__time">{{ movie.time }}</div>
+                                        <div class="movie__date">{{ movie.date }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {# tvshows #}
+        <div class="tvshows tvshows_gray">
+            <div class="center">
+                <div class="headtitle">ИНТЕРЕСНОЕ НА ЭТОЙ НЕДЕЛЕ</div>
+                <div class="tvshows__slider js-tvshow">
+                    {% for movie in movies %}
+                        <div class="tvshows__item">
+                            <a href="#" class="movie movie_{{ movie.color }}">
+                                <div class="movie__poster">
+                                    <img src="{{ movie.img }}" alt="">
+                                </div>
+                                <div class="movie__in">
+                                    <div class="movie__channel">{{ movie.channel }}</div>
+                                    <div class="movie__left">
+                                        <div class="movie__title js-ellip">{{ movie.title }}</div>
+                                        <div class="movie__genre js-ellip">боевик</div>
+                                    </div>
+                                    <div class="movie__right">
+                                        <div class="movie__time">{{ movie.time }}</div>
+                                        <div class="movie__date">{{ movie.date }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {# section #}
+        <div class="section section_channels">
+            <div class="center">
+                <div class="n-channels">
+                    <div class="n-channels__row js-channels2">
+                        {% for channel in channels %}
+                            <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

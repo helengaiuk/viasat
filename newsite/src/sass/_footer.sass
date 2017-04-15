@@ -1,0 +1,81 @@
+.footer
+	padding: 40px 0
+	+r(1023)
+		padding: 40px 0
+	+r(767)
+		padding: 30px 0
+	&__logo
+		display: inline-block
+		width: 122px
+		height: 26px
+		margin-bottom: 19px
+		background: url(../img/logo.png) no-repeat 0 0
+		background-size: cover
+	&__copyright
+		font-size: 12px
+		color: #888
+	&__nav
+		&-link
+			display: table
+			margin-bottom: 5px
+			font-size: 14px
+			color: $cl
+			&:first-child
+				margin-bottom: 10px
+				font-weight: 700
+				text-transform: uppercase
+			+r(479)
+				width: 100%
+	&__center
+		+clr
+		+r(1023)
+			display: flex
+			flex-direction: column
+	&__left
+		float: left
+		.footer__col
+			float: none
+			&:last-child
+				text-align: left
+		+r(1023)
+			float: none
+			width: 100%
+
+			text-align: center
+			order: 2
+			.footer__col
+				&:last-child
+					text-align: center
+	&__right
+		float: right
+		+clr
+		+r(1023)
+			float: none
+			width: 100%
+			margin-bottom: 30px
+			order: 1
+		+r(767)
+			margin-bottom: 10px
+	&__col
+		float: left
+		width: 195px
+		&:last-child
+			width: auto
+			text-align: right
+		+r(1023)
+			width: 25%
+		+r(767)
+			width: 50%
+			margin-bottom: 20px
+		+r(479)
+			width: 100%
+			text-align: center
+			&:last-child
+				width: 100%
+				text-align: center
+	&__blog-link
+		font-size: 14px
+		color: $cl
+		small
+			font-size: 12px
+			color: #868686

@@ -1,0 +1,177 @@
+---
+title: Filmoteka
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+cards:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="out">
+        <div class="topper" style="background-image: url(img/topper.jpg)">
+            <div class="topper__in">
+                <div class="center">
+                    <nav class="breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li>Фильмы на Viasat</li>
+                        </ul>
+                    </nav>
+                    <div class="topper__head">
+                        <div class="topper__left">
+                            <h1 class="n-h1">Фильмотека</h1>
+                        </div>
+                        <div class="topper__right">
+                            <ul class="n-socials">
+                                <li><a href="#">{{ mixins.icon('fb') }}</a></li>
+                                <li><a href="#">{{ mixins.icon('vk') }}</a></li>
+                                <li><a href="#">{{ mixins.icon('instagram') }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="s">
+                        <form>
+                            <label class="s__field">
+                                <input type="text" role="search" placeholder="Поиск">
+                            </label>
+                            <button class="s__submit" type="submit">{{ mixins.icon('search') }}</button>
+                        </form>
+                    </div>
+                    <div class="topper__bottom">
+                        <h2 class="n-h2 n-h2_white">Каталог фильмов</h2>
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#">Фильмы</a></li>
+                                <li><a href="#">Сериалы</a></li>
+                                <li><a href="#">Мультфильмы</a></li>
+                                <li><a href="#">Документальные фильмы</a></li>
+                                <li><a href="#">Спортивные передачи</a></li>
+                                <li><a href="#">Подборки</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# main page content #}
+        <div class="main">
+            <div class="center">
+
+                <div class="catalog">
+                    <h3 class="n-h3">Смотрите на каналах TV1000 и Viasat</h3>
+                    <div class="catalog__in">
+                        {% for card in cards %}
+                            <a href="#" class="card card_{{ card.color }}">
+                                <div class="card__poster">
+                                    <div class="card__flag"></div>
+                                    <img src="{{ card.img }}" alt="">
+                                </div>
+                                <div class="card__in">
+                                    <div class="card__channel">
+                                        <span class="n-channel n-channel_{{ card.color }}">{{ mixins.icon('star') }}</span> {{ card.channel }}
+                                    </div>
+                                    <div class="card__title js-ellip">{{ card.title }}</div>
+                                    <div class="card__about">
+                                        <p class="js-ellip">{{ card.genre }}</p>
+                                        <p class="js-ellip">{{ card.country }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                    <div class="more">
+                        <a href="#" class="n-btn n-btn_small n-btn_white">Показать еще</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# section #}
+    <div class="section section_channels">
+        <div class="center">
+            <div class="n-channels">
+                <div class="n-channels__row js-channels2">
+                    {% for channel in channels %}
+                        <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

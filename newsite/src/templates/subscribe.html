@@ -1,0 +1,150 @@
+---
+title: Subscribe
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+movies:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия'
+  country: 'США, 2014'
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="container old">
+        <div class="get">
+            <div class="top">
+                <div class="center">
+                    <!-- breadcrumbs -->
+                    <nav class="breadcrumbs">
+                        <ul>
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#">Подключение</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h1 class="h1">Подключить каналы</h1>
+                </div>
+            </div>
+            <div class="get__content">
+                <div class="get__btns">
+                    <div class="center">
+                        {# watch at #}
+                        <div class="n-watch js-watch">
+                            <div class="n-watch__btn js-watch-btn"><span>СМОТРЕТЬ НА</span></div>
+                            <ul class="n-watch__list js-watch-list">
+                                <li><a href="http://megogo.net/ru/tv/channels" class="n-watch__link">MEGOGO</a></li>
+                                <li><a href="http://oll.tv/iptv/tv1000" class="n-watch__link">OLL.TV</a></li>
+                                <li><a href="http://divan.tv/tv/" class="n-watch__link">Divan.TV</a></li>
+                                <li><a href="http://viasat.ua/ua/" class="n-watch__link">VIASAT</a></li>
+                                <li><a href="http://xtratv.com.ua/ru/" class="n-watch__link">Xtra TV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+        </div>
+        {# tvshows #}
+        <div class="tvshows tvshows_gray">
+            <div class="center">
+                <div class="headtitle">ИНТЕРЕСНОЕ НА ЭТОЙ НЕДЕЛЕ</div>
+                <div class="tvshows__slider js-tvshow">
+                    {% for movie in movies %}
+                        <div class="tvshows__item">
+                            <a href="#" class="movie movie_{{ movie.color }}">
+                                <div class="movie__poster">
+                                    <img src="{{ movie.img }}" alt="">
+                                </div>
+                                <div class="movie__in">
+                                    <div class="movie__channel">{{ movie.channel }}</div>
+                                    <div class="movie__left">
+                                        <div class="movie__title js-ellip">{{ movie.title }}</div>
+                                        <div class="movie__genre">боевик</div>
+                                    </div>
+                                    <div class="movie__right">
+                                        <div class="movie__time">{{ movie.time }}</div>
+                                        <div class="movie__date">{{ movie.date }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {# section #}
+        <div class="section section_channels">
+            <div class="center">
+                <div class="n-channels">
+                    <div class="n-channels__row js-channels2">
+                        {% for channel in channels %}
+                            <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

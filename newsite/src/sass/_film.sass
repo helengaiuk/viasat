@@ -1,0 +1,1648 @@
+.out_film
+	.nav
+		padding: 0 390px 0 276px
+		ul
+			margin: 0 -8px
+			li
+				margin: 0 8px
+				a
+					font-size: 14px
+		+r(1280)
+			padding: 0 0 0 276px
+		+r(900)
+			padding: 0 25px
+		+r(768)
+			padding: 0 25px 10px
+			ul
+				li
+					margin: 0
+.film-main
+	padding: 180px 390px 0 276px
+	color: #fff
+	+r(1024)
+		padding: 180px 0 0 276px
+	+r(900)
+		padding: 110px 0 0
+	.film-main__title
+		font-size: 35px
+		font-weight: 500
+	.film-main__original
+		margin-bottom: 30px
+		font-weight: 300
+		font-size: 20px
+	.film-main__about
+		min-height: 36px
+		font-size: 0
+		margin: 0 0 30px 0
+		+r(480)
+			margin: 0 0 20px
+	.film-main__item
+		position: relative
+		display: inline
+		vertical-align: middle
+		margin-left: 10px
+		text-shadow: 1px 1px 0px rgba(0,0,0,.5)
+		&:before
+			content: ""
+			position: absolute
+			top: -1px
+			left: 0
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background: #fff
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+			ul
+				li:first-child
+					margin-left: 10px
+		+r(480)
+			margin-left: 0
+			&:before
+				left: 3px
+			&:first-child
+				margin-left: 0
+		ul
+			display: inline
+			&.film-main__genre
+				color: #f8b636
+			li
+				position: relative
+				display: inline-block
+				vertical-align: middle
+				font-size: 14px
+				margin-left: 20px
+				&:before
+					content: "|"
+					position: absolute
+					top: -1px
+					left: -10px
+				&:first-child
+					margin-left: 10px
+					&:before
+						display: none
+.film
+	+clr
+	background: #fff
+	margin-bottom: 20px
+	.film__left
+		position: relative
+		top: -230px
+		width: 276px
+		float: left
+		padding: 0 38px 0 24px
+		margin-bottom: -230px
+		+r(1024)
+			padding: 0 20px
+		+r(900)
+			top: 0
+			margin-bottom: 0
+			float: none
+			width: 100%
+			.quote
+				display: none
+		+r(568)
+			padding: 0 10px
+	.film__row
+		+clr
+		margin: 0 -10px
+	.film__col
+		padding: 0 10px
+		.socials
+			margin: 10px 0
+			.socials__likes
+				width: 100%
+				float: none
+				ul
+					+r(1150)
+						display: block
+				li
+					width: 47.5%
+					&:last-child
+						margin-left: 5%
+					a
+						width: 100%
+						border-radius: 3px
+						.icon-like, .icon-dislike
+							font-family: 'icomoon'
+							speak: none
+							display: inline-block
+							vertical-align: middle
+							font-style: normal
+							font-weight: normal
+							font-variant: normal
+							text-transform: none
+							line-height: 1
+							-webkit-font-smoothing: antialiased
+							-moz-osx-font-smoothing: grayscale
+						.icon-like
+							&:before
+								content: "\e609"
+						.icon-dislike
+							&:before
+								content: "\e604"
+					+r(480)
+						width: 100%
+						margin-bottom: 10px
+						&:last-child
+							margin-left: 0px
+		.film__rating, .n-awards
+			display: none
+		+r(900)
+			float: left
+			width: 50%
+			.film__rating, .n-awards
+				display: block
+			.film__rating
+				border-top: 1px solid #e7e5e5
+				padding-top: 10px
+			.n-awards
+				padding-top: 20px
+	.film__poster
+		img
+			display: block
+			width: 100%
+		+r(900)
+			padding-top: 20px
+	.film__right
+		float: right
+		margin-top: -87px
+		width: 364px
+		min-height: 500px
+		border-left: 1px solid #e7e5e5
+		+r(1280)
+			width: 320px
+		+r(1150)
+			margin-top: 0
+			margin-bottom: 0
+		+r(1024)
+			width: 280px
+		+r(900)
+			float: none
+			width: 100%
+	.film__main
+		overflow: hidden
+		padding-top: 25px
+		padding-right: 20px
+		+r(900)
+			padding-right: 0
+	.film__rating
+		padding-bottom: 20px
+		+r(900)
+			display: none
+	&.film_premiere
+		.film__right
+			margin-top: -230px
+			+r(1280)
+				margin-top: 0
+				margin-bottom: 0
+//likes
+.like-block
+	+clr
+	padding: 14px 0 20px
+	.like, .dislike
+		width: 100px
+		height: 34px
+		border-radius: 3px
+		background: #e9e9e9
+		font-size: 18px
+		color: #717171
+		transition: background 200ms
+		&:hover
+			background: #d9d9d9
+		span
+			font-size: 12px
+		svg
+			position: relative
+			top: 2px
+	.like
+		float: left
+	.dislike
+		float: right
+		svg
+			transform: rotate(180deg)
+	+r(568)
+		.like, .dislike
+			float: none
+			width: 100%
+			margin-bottom: 10px
+// rating
+.rating
+	margin-bottom: 20px
+	+clr
+	.rating__title
+		+r(600)
+			float: left
+			width: 50%
+	.rating__item
+		+clr
+		.jq-ry-container
+			display: inline-block
+			vertical-align: middle
+		+r(600)
+			float: right
+			width: 50%
+			text-align: right
+	.rating__stars
+		position: relative
+		float: left
+		font-size: 0
+		.star
+			position: relative
+			&:nth-child(8), &:nth-child(9), &:nth-child(10)
+				color: #734fa0
+				&:after
+					content: ""
+					position: absolute
+					top: 1px
+					left: 1px
+					color: #734fa0
+					display: none
+					width: 28px
+					height: 28px
+					background: url("../img/star-full.svg")
+					+cover
+				&.active
+					&:after
+						display: block
+			+r(1200)
+				&:nth-child(8), &:nth-child(9), &:nth-child(10)
+					&:after
+						top: 0
+						left: 0
+						width: 25px
+						height: 25px
+			+r(1024)
+				&:nth-child(8), &:nth-child(9), &:nth-child(10)
+					&:after
+						top: 0
+						left: 0
+						width: 17px
+						height: 17px
+			+r(900)
+				&:nth-child(8), &:nth-child(9), &:nth-child(10)
+					&:after
+						top: 1px
+						left: 1px
+						width: 28px
+						height: 28px
+			+r(768)
+				&:nth-child(8), &:nth-child(9), &:nth-child(10)
+					&:after
+						top: 1px
+						left: 1px
+						width: 17px
+						height: 17px
+	.rating__value
+		float: right
+		font-size: 26px
+		font-weight: 900
+		color: #353535
+		+r(1200)
+			font-size: 20px
+		+r(600)
+			display: inline-block
+	+r(1200)
+		.star
+			font-size: 25px
+	+r(1024)
+		.star
+			font-size: 17px
+		.rating__value
+			font-size: 16px
+	+r(900)
+		.star
+			font-size: 28px
+		.rating__value
+			font-size: 20px
+	+r(768)
+		.rating__stars
+			float: none
+			display: inline-block
+			vertical-align: middle
+		.rating__value
+			float: none
+			display: inline-block
+			vertical-align: middle
+			text-align: center
+		.star
+			font-size: 20px
+	+r(600)
+		.rating__stars
+			display: inline-block
+			vertical-align: middle
+			width: auto
+			.star
+				display: none
+				font-size: 13px
+		.rating__value
+			font-size: 14px
+	&.rating_small
+		.star
+			font-size: 17px
+			color: #d9d9d9
+			&.active
+				color: #f8b636
+			&:nth-child(8), &:nth-child(9), &:nth-child(10)
+				color: #d9d9d9
+				&:after
+					display: none
+				&.active
+					color: #f8b636
+		.rating__value
+			font-size: 16px
+		+r(900)
+			.star
+				font-size: 28px
+			.rating__value
+				font-size: 20px
+		+r(768)
+			.rating__item
+				float: none
+				width: 100%
+			.rating__stars
+				display: block
+				text-align: center
+				.star
+					font-size: 20px
+					display: inline-block
+			.rating__value
+				font-size: 30px
+				display: block
+				text-align: center
+	&.rating_rotten
+		.rating__stars
+			.star
+				color: red
+				&.active
+					color: green
+				&:nth-child(8), &:nth-child(9), &:nth-child(10)
+					color: red
+					&:after
+						display: none
+					&.active
+						color: green
+
+.star
+	display: inline-block
+	vertical-align: middle
+	font-size: 30px
+	color: #d9d9d9
+	&.active
+		color: #f8b636
+.team
+	margin-bottom: 20px
+	.headline
+		display: none
+		margin: 44px 0 30px
+		+r(768)
+			display: block
+			margin: 20px 0px
+	.team__wrap
+		+r(768)
+			display: none
+		+r(768)
+			padding-top: 25px 
+			border-top: 1px solid #e7e5e5
+	.team__block
+		margin-top: 25px
+		&:first-child
+			margin-top: 0
+	.team__row
+		+clr
+		font-size: 12px
+		margin-bottom: 8px
+		+r(900)
+			font-size: 14px
+		+r(768)
+			padding: 0px 15px
+		+r(480)
+			font-size: 12px
+	.team__left
+		float: left
+		width: 50%
+		color: #919191
+		+r(768)
+			&.is-hide
+				display: none
+	.team__right
+		float: right
+		width: 50%
+		color: #000
+		+r(768)
+			&.is-bold
+				font-weight: 500
+			&.is-main
+				float: none
+				width: 100%
+				text-align: center
+				font-weight: 500
+				font-size: 18px
+
+.quote
+	position: relative
+	padding: 40px 25px
+	text-align: center
+	font-size: 16px
+	color: #727272
+	font-weight: 500
+	border-top: 1px solid #d7d4d4
+	&:before
+		content: '“'
+		position: absolute
+		top: 0
+		left: 0
+		color: #e9e9e9
+		font-family: Georgia
+		font-size: 85px
+		font-weight: 400
+		line-height: 1
+	&:after
+		content: '“'
+		position: absolute
+		bottom: 0px
+		right: 0
+		color: #e9e9e9
+		font-family: Georgia
+		font-size: 85px
+		transform: rotate(180deg)
+		font-weight: 400
+		line-height: 1
+		+r(768)
+			bottom: 5px
+	+r(768)
+		padding: 35px 25px
+		&:before, &:after
+			font-size: 60px
+	+r(568)
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+
+.premiere
+	position: relative
+	padding: 20px 28px
+	background: #f8b636
+	margin-left: -1px
+	+r(768)
+		margin-left: 0
+	+r(480)
+		padding: 20px 10px
+	.premiere__channel
+		font-size: 16px
+		color: #222121
+		padding-bottom: 5px
+		border-bottom: 1px solid #eba84c
+	.premiere__time
+		font-size: 0
+		padding: 13px 0
+		border-bottom: 1px solid #eba84c
+		.date
+			display: inline-block
+			vertical-align: middle
+			margin: 0 20px 0 53px
+			width: 115px
+			+r(1280)
+				margin: 0 20px 0 9px
+	.premiere__title
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		color: rgba(#222121, 0.7)
+		+r(1024)
+			margin-bottom: 15px
+		+r(900)
+			margin-bottom: 0px
+	.premiere__repeat
+		padding: 13px 0
+		.date
+			display: inline-block
+			vertical-align: middle
+			margin: 0 10px 0 10px
+			&-wrap
+				display: inline-block
+			+r(1280)
+				margin-left: 0px
+				&:last-child
+					margin-right: 0px
+			+r(900)
+				margin-left: 10px
+				&:last-child
+					margin-right: 10px
+		+r(480)
+			.premiere__title
+				display: block
+				margin-bottom: 10px
+.date
+	position: relative
+	color: #222121
+	text-align: center
+	.date__time
+		font-size: 22px
+		font-weight: bold
+	.date__day
+		font-size: 12px
+	&.date_big
+		.date__time
+			font-size: 32px
+		.date__day
+			font-size: 20px
+.remind
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	&:hover
+		.remind__hint
+			opacity: 1
+			display: block
+		+r(1023)
+			.remind__hint
+				opacity: 0
+				display: none
+	.remind__btn
+		width: 50px
+		height: 50px
+		border-radius: 3px
+		background: #fff
+		font-size: 23px
+		color: #face79
+		&:hover
+			color: #734fa1
+	.remind__hint
+		position: absolute
+		top: 0
+		left: 55px
+		height: 50px
+		opacity: 0
+		display: none
+		min-width: 170px
+		background-color: #6d57a5
+		border-radius: 3px
+		padding: 0 16px
+		+vertical
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 12px
+			color: #fff
+		+r(1450)
+			left: auto
+			right: 55px
+.connect-channels
+	display: block
+	height: 87px
+	line-height: 87px
+	background: #734fa1
+	font-size: 14px
+	font-weight: bold
+	text-transform: uppercase
+	text-align: center
+	color: #fff
+.n-watch
+	position: relative
+	text-align: center
+	z-index: 2
+	.n-watch__btn
+		height: 86px
+		padding: 0 10px
+		+vertical
+		background: #f8b636
+		span
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			font-size: 14px
+			font-weight: bold
+			color: #222121
+			&:after
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				margin-left: 20px
+				+arr(12, 7, #222121, b)
+				transition: transform 200ms
+		p
+			display: inline-block
+			vertical-align: middle
+			color: #222121
+			font-size: 14px
+			a
+				color: #222121
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+		&.open
+			span:after
+				transform: rotate(180deg)
+		+r(960)
+			padding-left: 0
+			text-align: center
+		+r(768)
+			padding-left: 20px
+	.n-watch__list
+		position: absolute
+		top: 86px
+		left: 0
+		right: 0
+		padding: 20px 0
+		background: #ffc34f
+		display: none
+		a
+			display: block
+			color: #222121
+			transition: background 200ms
+			padding: 5px 0 5px 5px
+			font-size: 14px
+			font-weight: bold
+			text-transform: uppercase
+			&:hover
+				background: #fff
+		+r(960)
+			text-align: center
+			a
+				padding: 5px
+.actors
+	position: relative
+	padding: 30px
+	+r(900)
+		padding: 20px
+	.actors__topper
+		+clr
+		margin-bottom: 30px
+	.h4
+		float: left
+		+r(1024)
+			float: none
+			width: 100%
+	.actors__list
+		padding: 0 5px
+		+r(900)
+			padding: 0 20px
+		.slick-prev,
+		.slick-next
+			width: 30px
+			height: 30px
+			top: 50%
+			margin-top: -15px
+			border-radius: 50%
+			color: $cl
+		.slick-prev
+			left: -25px
+			transition: opacity 200ms
+			&.slick-disabled
+				opacity: 0
+			+r(900)
+				left: -10px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-left-gray.svg") center no-repeat
+			&:after
+				content: ""
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-left-white.svg") center no-repeat
+			&:hover
+				background: #dadada
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+		.slick-next
+			right: 5px
+			transition: opacity 200ms
+			&.slick-disabled
+				opacity: 0
+			right: -25px
+			+r(900)
+				right: -10px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-right-gray.svg") center no-repeat
+			&:after
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-right-white.svg") center no-repeat
+				z-index: 3
+			&:hover
+				background: #dadada
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+	.actors__item
+		margin-top: 40px
+		+clr
+		&:first-child
+			margin-top: 0
+		+r(900)
+			width: 50%
+			float: left
+			margin-top: 0
+			margin-bottom: 20px
+			min-height: 70px
+		+r(480)
+			width: 100%
+			float: none
+	.actors__img
+		position: relative
+		float: left
+		width: 60px
+		height: 60px
+		margin-right: 40px
+		border-radius: 50%
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			height: 100%
+			min-width: 100%
+		+r(1024)
+			margin-right: 10px
+	.actors__about
+		padding-top: 7px
+		overflow: hidden
+	.actors__name
+		font-size: 17px
+		font-weight: 500
+		color: #353535
+	.actors__role
+		font-size: 14px
+		color: #919191
+		font-style: italic
+		padding-left: 1px
+.story
+	position: relative
+	margin-bottom: 40px
+	.story__head
+		display: none
+		+r(768)
+			display: block
+	.story__topper
+		+clr
+		margin-bottom: 30px
+		.h4
+			float: left
+			padding-top: 10px
+		h4
+			margin-bottom: 0px	
+		.n-awards
+			float: right
+			+r(1080)
+				float: none
+				width: 100%
+			+r(900)
+				display: none
+		+r(1280)
+			margin-bottom: 0
+		+r(900)
+			padding: 0 20px
+		+r(768)
+			display: none
+	.story__article
+		color: #919191
+		font-size: 14px
+		p
+			margin-bottom: 25px
+		+r(900)
+			padding: 0 20px
+		+r(768)
+			display: none
+		a
+			color: $violet
+
+.n-awards
+	font-size: 0
+	+r(1280)
+		margin-bottom: 30px
+	.n-awards__item
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-left: 25px
+		padding-left: 25px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			width: 1px
+			height: 24px
+			margin-top: -12px
+			background: #b7b7b7
+		&:first-child
+			margin-left: 0
+			padding-left: 0
+			&:before
+				display: none
+		+r(1280)
+			margin-left: 10px
+			padding-left: 10px
+		+r(900)
+			display: block
+			margin-left: 0
+			padding-left: 50px
+			margin-bottom: 20px
+			&:before
+				display: none
+			&:first-child
+				padding-left: 50px
+		+r(768)
+			padding-left: 0
+			&:first-child
+				padding-left: 0
+	.n-awards__img
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		+r(480)
+			margin-right: 2px
+	.n-awards__counter
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		color: #010101
+		font-size: 16px
+		span
+			font-size: 18px
+		+r(480)
+			font-size: 13px
+			margin-right: 0
+			span
+				font-size: 15px
+	.n-awards__title
+		display: inline-block
+		vertical-align: middle
+		font-size: 13px
+		color: #353535
+		strong
+			font-weight: 700
+		+r(900)
+			font-size: 18px
+		+r(480)
+			font-size: 13px
+			max-width: 80px
+			text-align: center
+.rating-hint
+	margin-top: -20px
+	color: rgba(#403f3f, 0.6)
+	text-align: right
+	+r(480)
+		font-size: 11px
+
+.facts
+	position: relative
+	clear: both
+	+r(768)
+		margin-bottom: 30px
+	.slick-dots
+		position: absolute
+		top: 20px
+		left: 50%
+		transform: translateX(-50%)
+		padding-top: 0
+		li
+			&.slick-active
+				button
+					&:before
+						opacity: 1
+						transform: scale(1)
+		button
+			&:before
+				opacity: 0.5
+	.facts__slider
+		position: relative
+		.slick-prev,
+		.slick-next
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			color: $cl
+		.slick-prev
+			left: 45px
+			+r(640)
+				left: 10px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-left-white.svg") center no-repeat
+			&:after
+				content: ""
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-left.svg") center no-repeat
+			&:hover
+				background: #fff
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+		.slick-next
+			right: 45px
+			+r(640)
+				right: 10px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-right-white.svg") center no-repeat
+			&:after
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-right.svg") center no-repeat
+				z-index: 3
+			&:hover
+				background: #fff
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+	.facts__slide
+		position: relative
+		padding-top: 70px
+		min-height: 280px
+	.facts__img
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		+cover
+		+g(#8f7dbd, #302649)
+		z-index: 1
+	.facts__in
+		position: relative
+		padding: 0 20%
+		margin: 0 auto
+		+clr
+		z-index: 2
+		+r(640)
+			padding: 0 10%
+	.facts__text
+		font-size: 14px
+		color: rgba(#fff, 0.6)
+.headline
+	position: relative
+	margin: 44px 0 30px 277px
+	color: #353535
+	font-size: 20px
+	font-weight: 700
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		height: 26px
+		left: -20px
+		width: 3px
+		background: #f8b636
+	+r(1024)
+		margin: 44px 0 30px 150px
+	+r(768)
+		margin: 0 20px 20px
+		cursor: pointer
+		padding: 20px 0px 0px
+		border-top: 1px solid #e7e5e5
+		&:after
+			content: ""
+			position: absolute
+			top: 29px
+			right: 25px
+			width: 16px
+			height: 10px
+			background: url("../img/top.svg")
+			+cover
+			transform: rotate(180deg)
+			+tr(transform .3s)
+		&:before
+			top: 20px
+		&.is-active
+			&:after
+				transform: rotate(360deg)
+
+.n-trailer
+	position: relative
+	clear: both
+	+r(768)
+		margin-bottom: 30px
+	.n-trailer__in
+		position: relative
+		padding-left: 277px
+		+r(1024)
+			padding-left: 150px
+		+r(768)
+			padding-left: 0
+			display: none
+	.n-trailer__video
+		position: relative
+		padding-bottom: 50%
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+.quotes
+	margin-bottom: 20px
+	.headline
+		cursor: default
+		&:after
+			display: none
+	.quotes__slider
+		.slick-prev,
+		.slick-next
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			color: $cl
+		.slick-prev
+			left: 40px
+			+r(1024)
+				left: 10px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-left-white.svg") center no-repeat
+			&:after
+				content: ""
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-left.svg") center no-repeat
+			&:hover
+				background: #fff
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+		.slick-next
+			right: 40px
+			+r(1024)
+				right: 10px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-right-white.svg") center no-repeat
+			&:after
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #fff
+				background: url("../img/arr-right.svg") center no-repeat
+				z-index: 3
+			&:hover
+				background: #fff
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+		// +r(768)
+		// 	.slick-list
+		// 		background: #6d57a5
+	.quotes__slide
+		+clr
+	.quotes__cell
+		position: relative
+		display: table
+		width: 100%
+	.quotes__img
+		position: relative
+		display: table-cell
+		width: 50%
+		overflow: hidden
+		img
+			display: block
+			width: 100%
+			height: auto
+			+r(320)
+				height: 190px
+		+r(568)
+			display: block
+			width: 100%
+			img
+				max-height: 490px
+	.quotes__content
+		position: relative
+		display: table-cell
+		width: 50%
+		vertical-align: middle
+		padding: 0 100px 0 50px
+		background: $violet
+		z-index: 2
+		.quote
+			display: inline-block
+			vertical-align: middle
+			border-top: none
+			color: #fff
+			font-weight: 400
+			text-align: left
+			z-index: 2
+		+r(900)
+			padding: 0 50px 0 20px
+		+r(568)
+			display: block
+			width: 100%
+			height: 250px
+			padding: 40px 10px
+			text-align: center
+		+r(568)
+			padding: 20px 10px
+.n-posters
+	margin-bottom: 40px
+	padding-right: 40px
+	.headline
+		cursor: default
+		&:after
+			display: none
+	.n-posters__list
+		padding-left: 277px
+		+clr
+		margin: 0 -1%
+	.slick-track
+		display: flex
+		flex-direction: row
+		align-items: flex-end
+	+r(1024)
+		padding-right: 20px
+		.n-posters__list
+			padding-left: 150px
+	+r(768)
+		.n-posters__list
+			padding-left: 20px
+.n-poster
+	width: 25%
+	float: left
+	padding: 0 1%
+	text-align: center
+	.n-poster__img
+		margin-bottom: 15px
+		// height: 265px
+		// max-width: 184px
+		overflow: hidden
+		img
+			display: inline-block
+			width: 100%
+			height: auto
+		// +r(375)
+		// 	height: 200px
+	.n-poster__size
+		margin-bottom: 8px
+		font-size: 14px
+		color: #575656
+	.n-poster__download
+		display: inline-block
+		font-size: 14px
+		font-weight: 700
+		color: #2c2c2c
+		svg
+			margin-right: 10px
+.rewards
+	+clr
+	margin-bottom: 30px
+	+r(768)
+		padding: 0 30px
+	.headline
+		cursor: default
+		&:after
+			display: none
+		+r(768)
+			margin-left: -10px
+	.rewards__in
+		position: relative
+		+clr
+		padding-left: 277px
+		+r(1024)
+			padding-left: 150px
+		+r(768)
+			padding-left: 0
+	.rewards__list
+		font-size: 0
+		padding-right: 30px
+		.slick-prev,
+		.slick-next
+			width: 30px
+			height: 30px
+			top: 50%
+			margin-top: -15px
+			border-radius: 50%
+			color: $cl
+		.slick-prev
+			left: -30px
+			transition: opacity 200ms
+			&.slick-disabled
+				opacity: 0
+			+r(768)
+				left: -25px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-left-gray.svg") center no-repeat
+			&:after
+				content: ""
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-left-white.svg") center no-repeat
+			&:hover
+				background: #dadada
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+		.slick-next
+			right: 5px
+			transition: opacity 200ms
+			&.slick-disabled
+				opacity: 0
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-right-gray.svg") center no-repeat
+			&:after
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				border: 2px solid #dadada
+				background: url("../img/arr-right-white.svg") center no-repeat
+				z-index: 3
+			&:hover
+				background: #dadada
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+		+r(1024)
+			clear: both
+			margin-bottom: 30px
+	.rewards__all
+		margin-bottom: 90px
+		a
+			color: #fff
+			svg
+				vertical-align: middle
+	.rewards__year
+		margin-bottom: 130px
+		a
+			display: inline-block
+			font-size: 14px
+			color: #fff
+			font-weight: 500
+			border-bottom: 2px solid #fff
+
+.reward
+	position: relative
+	display: inline-block
+	vertical-align: top
+	width: 33.3%
+	padding: 0 1%
+	font-size: 14px
+	+r(568)
+		width: 100%
+		text-align: center
+	.reward__in
+		position: relative
+		max-width: 150px
+		margin: 0 auto
+		+r(480)
+			max-width: 100%
+	.reward__img
+		height: 140px
+		// margin-bottom: 20px
+		text-align: center
+		img
+			max-width: 100%
+	.reward__year
+		position: absolute
+		top: 0
+		left: 0
+		color: #919191
+		font-weight: 500
+		+r(568)
+			top: 182px
+	.reward__name
+		margin-bottom: 30px
+		color: #353535
+		font-weight: 700
+		text-transform: uppercase
+	.reward__titles
+		li
+			position: relative
+			font-size: 13px
+			margin-bottom: 15px
+			color: #919191
+			&:before
+				content: ""
+				position: absolute
+				top: 6px
+				left: -10px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #353535
+		+r(568)
+			text-align: left
+			padding-left: 40%
+.comments
+	+clr
+	.comments__in
+		float: left
+		width: 67.5%
+		padding-right: 5%
+		background: #fff url("../img/comments.png") 0 100px no-repeat
+		+r(768)
+			float: none
+			width: 100%
+			padding: 20px
+			margin-bottom: 20px
+			background-size: 40px
+	.comments__aside
+		float: right
+		width: 30%
+		margin-left: 2.5%
+		+r(768)
+			float: none
+			width: 100%
+			margin-left: 0
+			margin-bottom: 20px
+	.comments__wrap
+		padding-left: 277px
+		+r(1024)
+			padding-left: 150px
+		+r(768)
+			display: none
+			padding-left: 30px
+	.comments__form
+		margin-bottom: 20px
+		& > p
+			margin-bottom: 20px
+			color: #919191
+			font-size: 14px
+	.comments__input
+		margin-bottom: 10px
+		width: 100%
+		border-radius: 3px
+		padding: 7px 10px
+		border: 1px solid transparent
+		transition: border 200ms
+		+placeholder
+			color: rgba(#919191, 0.6)
+		&:focus
+			border-color: #919191
+	textarea.comments__input
+		resize: none
+		height: 100px
+		&:focus
+			border-color: #919191
+	.comments__bottom
+		+clr
+	.comments__captcha
+		float: left
+		img
+			display: block
+			max-width: 100%
+		+r(1280)
+			float: none
+	.comments__submit
+		float: right
+		padding-top: 10px
+		+r(1280)
+			float: none
+	.comments__btn
+		height: 42px
+		padding: 0 38px
+		vertical-align: middle
+		border: 2px solid rgba(#919191, 0.5)
+		border-radius: 3px
+		font-size: 14px
+		font-weight: 700
+		color: rgba(#919191, 0.5)
+		transition: background 200ms, color 200ms
+		&:hover
+			background: rgba(#919191, 0.5)
+			color: #fff
+	.comments__list
+		+r(568)
+			margin-left: -20px
+	.comment__options
+		padding-top: 10px
+		text-align: right
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+			button
+				font-size: 16px
+				color: #888
+	.comments__more
+		display: inline-block
+		margin-bottom: 35px
+		color: #919191
+		font-size: 14px
+		svg
+			vertical-align: middle
+	.headline
+		+r(768)
+			margin-bottom: 0
+		+r(425)
+			&:after
+				display: none
+.comment
+	position: relative
+	+clr
+	border-top: 1px solid #f3f3f3
+	padding: 30px 0
+	&:first-child
+		border-top: none
+	.comment__user
+		float: left
+		width: 60px
+	.comment__text
+		overflow: hidden
+		color: #919191
+		font-size: 14px
+		strong
+			display: block
+			font-weight: normal
+			margin-bottom: 20px
+
+
+.tvshows
+	position: relative
+	background: #352361
+	padding: 24px 0 48px
+	&.tvshows_gray
+		background: #504f58
+	.tvshows__slider
+		margin: 0 -20px
+		+r(1024)
+			margin: 0
+			padding: 0 20px
+	.tvshows__item
+		padding: 0 20px
+	.slick-prev,
+	.slick-next
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		color: $cl
+	.slick-prev
+		left: -40px
+		+r(1280)
+			left: -20px
+		+r(768)
+			left: 0
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 2px solid #fff
+			background: url("../img/arr-left-white.svg") center no-repeat
+		&:after
+			content: ""
+			opacity: 0
+			position: absolute
+			top: 0
+			left: 0
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 2px solid #fff
+			background: url("../img/arr-left.svg") center no-repeat
+		&:hover
+			background: #fff
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+	.slick-next
+		right: -40px
+		+r(1280)
+			right: -20px
+		+r(768)
+			right: 0
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 2px solid #fff
+			background: url("../img/arr-right-white.svg") center no-repeat
+		&:after
+			opacity: 0
+			position: absolute
+			top: 0
+			left: 0
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 2px solid #fff
+			background: url("../img/arr-right.svg") center no-repeat
+			z-index: 3
+		&:hover
+			background: #fff
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+
+
+
+
+
+
+
+
+
+
+

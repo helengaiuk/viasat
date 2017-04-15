@@ -1,0 +1,32 @@
+{% import "../partials/_mixins.html" as mixins %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <title>{{ title }}</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="all" href="css/{{css}}">
+  <meta charset="utf-8" />
+</head>
+<body bgcolor="{{bg}}">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tr>
+<td bgcolor="{{bg}}">
+  <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" id="bodyTable" width="600">
+        <!-- start logo -->
+        {% include "partials/_logo.html" %}
+        <!-- end logo -->
+        <!-- start header -->
+        {% include "partials/_header.html" %}
+        <!-- end header -->
+        
+        {% block content %}{% endblock %}
+        {% block secondPart %}{% endblock %}
+
+        {% include "partials/_footer.html" %}
+
+  </table>
+</td>
+</tr>
+</table>
+</body>
+</html>

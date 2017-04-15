@@ -1,0 +1,108 @@
+---
+title: Подтверждение подписки на рассылку
+snippet: Learn more about the latest Chris's discoveries
+css: main.css
+bg: '#e8e9f1'
+headerBgColor: '#a92650'
+headerBg: 'https://s11.postimg.org/tlvjfraxf/header_Bg.png'
+footerbg: '#e8e9f1'
+buttonLink: 'http://www.viasat-channels.tv/tv-guide'
+logoLink: 'http://www.viasat-channels.tv'
+
+---
+{% extends "layouts/_layout.html" %}
+{% block content %}
+	<tr>
+		<td align="center" bgcolor="#f4f7fe">
+			<table>
+				{{mixins.space(34)}}
+				<tr>
+					<td align="center"><div class="title">Приветствуем!</div></td>
+				</tr>
+				{{mixins.space(10)}}
+				<tr>
+					<td align="center"><div class="sub-title">Вы подписались на получение свежих анонсов<br/>фильмов и передач на каналах TV1000 и Viasat</div></td>
+				</tr>
+				{{mixins.space(15)}}
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" width="100%" height="130">
+			<img src="https://s11.postimg.org/md45h9eub/letter.png" alt="" width="600" height="130">
+		</td>
+	</tr>
+	{{mixins.space(30)}}
+	<tr>
+		<td align="center">
+			<div class="sub-title sub-title_silver">Для подтверждения правильности указанной<br/>электронной почты, пожалуйста, нажмите на кнопку:</div>
+		</td>
+	</tr>
+	{{mixins.space(30)}}
+	<tr>
+		<td align="center">
+			<table>
+				<tr >
+					<td height="55" align="center">
+						<a href="{{buttonLink}}" class="button">Подтвердить подписку</a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	{{mixins.space(40)}}
+	<tr>
+		<td height="1" align="center">
+			<table>
+				<tr>
+					<td width="35"></td>
+					<td height="1" width="530" background="http://www.imageup.ru/img32/2607211/separator.png"></td>
+					<td width="35"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	{{mixins.space(30)}}
+	<tr>
+		<td align="center">
+			<div class="title title_small">Каждую неделю мы будем:</div>
+		</td>
+	</tr>
+	{{mixins.space(30)}}
+	<tr>
+		<td width="600" height="354" valign="center">
+			<table width="600">
+				<tr>
+					<td width="300" height="177" bgcolor="#734fa1" align="center" valign="center">
+						<div width="300" height="177" class="text-block">Cообщать о лучших<br>фильмах и передачах<br>на наших телеканалах</div>
+					</td>
+					<td width="300" height="177">
+						<img style="width: 300px; height: 177px;" src="https://s3.postimg.org/44atwh83n/mam.png" alt="">
+					</td>
+				</tr>
+				<tr>
+					<td width="300" height="177">
+						<img style="width: 300px; height: 177px;" src="https://s12.postimg.org/n5uns2xjh/image.png" alt="">
+					</td>
+					<td width="300" height="177" bgcolor="#f9b636" align="center" valign="center">
+						<div width="100%" height="177" class="text-block">Делиться последними<br>новостями из мира кино<br>и жизни известных актеров</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	{{mixins.space(10)}}
+	<tr>
+		<td height="39">
+			<img src="https://s15.postimg.org/vdbovkvcr/img_line.png" alt="" width="600" height="39">
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<div class="sub-title sub-title_small sub-title_silver">Мы не занимаемся рассылкой спама.<br>Если вы получили это письмо по ошибке, просто игнорируйте его.</div>
+		</td>
+	</tr>
+	{{mixins.space(40)}}
+{% endblock %}
+
+<!-- block  premiere -->

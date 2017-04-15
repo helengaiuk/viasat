@@ -1,0 +1,332 @@
+---
+title: Movie
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+movies:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия'
+  country: 'США, 2014'
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="container old">
+        <div class="movie">
+            <div class="movie__topper">
+                <div class="center">
+                    <!-- breadcrumbs -->
+                    <nav class="breadcrumbs">
+                        <ul>
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#">TV1000 Premium HD</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h1 class="h1">Спортивная передача</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="center">
+                    <!-- main -->
+                    <div class="main">
+                        <div class="item">
+                            <!-- trailer -->
+                            <div class="trailer">
+                                <img src="img/trailer.jpg" alt="">
+                                <div class="trailer__in">
+                                    <div class="trailer__play">
+                                        <button type="button" class="play-btn"><i class="play"></i></button>
+                                        <p>смотреть трейлер</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item content -->
+                            <div class="item__content">
+                                <div class="item__info">
+                                    <div class="item__tools">
+                                        <!-- socials -->
+                                        <div class="socials socials_wide">
+                                            <div class="socials__likes">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#"><i class="icon-like"></i><span>713</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="icon-dislike"></i><span>3</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- rating -->
+                                        <div class="rating">
+                                            <div class="rating__item">
+                                                <div class="rating__link">
+                                                    <img src="img/imdb.jpg" width="56" alt="">
+                                                </div>
+                                                <div class="rating__mark">
+                                                    <strong>7.1</strong>
+                                                </div>
+                                            </div>
+                                            <div class="rating__item">
+                                                <div class="rating__link">
+                                                    <img src="img/kinopoisk.png" width="70" alt="">
+                                                </div>
+                                                <div class="rating__mark">
+                                                    <strong>6.9</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__about">
+                                        <h2 class="h2">Грань будущего</h2>
+                                        <div class="item__original">Edge Of Tomorrow</div>
+                                        <div class="item__table">
+                                            <div class="item__row">
+                                                <div class="item__col"><strong>Год:</strong></div>
+                                                <div class="item__col">2014</div>
+                                            </div>
+                                            <div class="item__row">
+                                                <div class="item__col"><strong>Страна:</strong></div>
+                                                <div class="item__col">Великобритания, США, Франция</div>
+                                            </div>
+                                            <div class="item__row">
+                                                <div class="item__col"><strong>Жанр:</strong></div>
+                                                <div class="item__col">боевики, фантастика</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item__descr">
+                                    <p><strong>Сюжет</strong></p>
+                                    <p>В недалёком будущем раса инопланетян вторгается на Землю. Никакая армия в мире не может противостоять им. Майор Уильям Кейдж умирает в бою, но случается невозможное — он оказывается во временной петле. Раз за разом он попадает в один и тот же бой, сражается и умирает… снова и снова. И каждое повторяющееся сражение приближает его к разгадке того, как победить врага.</p>
+                                </div>
+                                <div class="gallery-preview">
+                                    <p><strong>Кадры</strong></p>
+                                    <div class="row">
+                                        <a href="#" class="gallery-preview__item js-gallery col4" data-slide="0">
+                                            <img src="img/img7.jpg" alt="">
+                                        </a>
+                                        <a href="#" class="gallery-preview__item js-gallery col4" data-slide="1">
+                                            <img src="img/img7.jpg" alt="">
+                                        </a>
+                                        <a href="#" class="gallery-preview__item js-gallery col4" data-slide="2">
+                                            <img src="img/img7.jpg" alt="">
+                                        </a>
+                                        <a href="#" class="gallery-preview__item js-gallery col4" data-slide="0">
+                                            <img src="img/img7.jpg" alt="">
+                                            <div class="gallery-preview__more"><span>+7</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item__people row">
+                                    <div class="col4">
+                                        <p><strong>В ролях:</strong></p>
+                                        <ul>
+                                            <li>Том Круз</li>
+                                            <li>Эмили Блант</li>
+                                            <li>Билл Пэкстон</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col4">
+                                        <p><strong>Режиссер:</strong></p>
+                                        <ul>
+                                            <li>Даг Лайман</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col4">
+                                        <p><strong>Продюсеры:</strong></p>
+                                        <ul>
+                                            <li>Алекс Хейнеман</li>
+                                            <li>Эндрю Рона</li>
+                                            <li>Джоэл Силвер</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col4">
+                                        <p><strong>Сценарий:</strong></p>
+                                        <ul>
+                                            <li>Кристофер МакКуорри</li>
+                                            <li>Джез Баттеруорт</li>
+                                            <li>Джон-Генри Баттеруорт</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar -->
+                    <aside class="sidebar">
+                        <div class="info">
+                            <div class="info__in">
+                                <img src="img/channel1.png" width="125" alt="">
+                            </div>
+                            <a href="#" class="info__add">Подключить канал</a>
+                            <div class="n-watch js-watch">
+                                <div class="n-watch__btn js-watch-btn"><span>СМОТРЕТЬ НА</span></div>
+                                <ul class="n-watch__list js-watch-list" style="display: none;">
+                                    <li><a href="#" class="n-watch__link">MEGOGO</a></li>
+                                    <li><a href="#" class="n-watch__link">OLL.TV</a></li>
+                                    <li><a href="#" class="n-watch__link">Divan.TV</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="divide"></div>
+                        <!-- socials -->
+                        <div class="socials socials_wide">
+                            <div class="socials__links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/TV1000UA/"><i class="icon-fb"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://vk.com/tv1000.kino">{{ mixins.icon('vk') }}</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://instagram.com/tv1000_channels">{{ mixins.icon('instagram') }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="divide"></div>
+                        <a href="#" class="subscr">Подпишитесь на анонсы</a>
+                        <a href="#" class="feedback">Свяжитесь с нами</a>
+                        <!-- widget -->
+                        <div class="fb-widget">
+                            <img src="img/fb-widget.jpg" alt="">
+                        </div>
+                        <!-- banners -->
+                        <div class="banner">
+                            <img src="img/banner.jpg" alt="">
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        {# tvshows #}
+        <div class="tvshows">
+            <div class="center">
+                <div class="headtitle">СМОТРИТЕ НА КАНАЛЕ <strong>TV1000 Premium HD</strong></div>
+                <div class="tvshows__slider js-tvshow">
+                    {% for movie in movies %}
+                        <div class="tvshows__item">
+                            <a href="#" class="movie">
+                                <div class="movie__poster">
+                                    <img src="{{ movie.img }}" alt="">
+                                </div>
+                                <div class="movie__in">
+                                    <div class="movie__left">
+                                        <div class="movie__title js-ellip">{{ movie.title }}</div>
+                                        <div class="movie__genre js-ellip">{{ movie.genre }}</div>
+                                    </div>
+                                    <div class="movie__right">
+                                        <div class="movie__time">{{ movie.time }}</div>
+                                        <div class="movie__date">{{ movie.date }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {# tvshows #}
+        <div class="tvshows tvshows_gray">
+            <div class="center">
+                <div class="headtitle">ИНТЕРЕСНОЕ НА ЭТОЙ НЕДЕЛЕ</div>
+                <div class="tvshows__slider js-tvshow">
+                    {% for movie in movies %}
+                        <div class="tvshows__item">
+                            <a href="#" class="movie movie_{{ movie.color }}">
+                                <div class="movie__poster">
+                                    <img src="{{ movie.img }}" alt="">
+                                </div>
+                                <div class="movie__in">
+                                    <div class="movie__channel">{{ movie.channel }}</div>
+                                    <div class="movie__left">
+                                        <div class="movie__title js-ellip">{{ movie.title }}</div>
+                                        <div class="movie__genre js-ellip">боевик</div>
+                                    </div>
+                                    <div class="movie__right">
+                                        <div class="movie__time">{{ movie.time }}</div>
+                                        <div class="movie__date">{{ movie.date }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {# section #}
+        <div class="section section_channels">
+            <div class="center">
+                <div class="n-channels">
+                    <div class="n-channels__row js-channels2">
+                        {% for channel in channels %}
+                            <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

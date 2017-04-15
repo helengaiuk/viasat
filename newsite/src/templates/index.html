@@ -1,0 +1,620 @@
+---
+title: Viasat
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+cards:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: violet
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: orange
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: red
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: violet
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: orange
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: red
+  genre: 'Комедия'
+  country: 'США, 2014'
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    {# promo #}
+    <div class="promo">
+        <div class="promo__list js-promo">
+            <a href="#" class="promo__item">
+                <picture>
+                    <source srcset="img/1.png" media="(min-width: 1024px)">
+                    <source srcset="img/mob2.png" media="(min-width: 320px)">
+                    <img src="img/1.png" alt="">
+                </picture>
+            </a>
+            <a href="#" class="promo__item">
+                <picture>
+                    <source srcset="img/2.png" media="(min-width: 1024px)">
+                    <source srcset="img/mob1.png" media="(min-width: 320px)">
+                    <img src="img/2.png" alt="">
+                </picture>
+            </a>
+        </div>
+    </div>
+    {# search #}
+    <div class="search">
+        <div class="search__center center">
+            <div class="search__wrap">
+                <div class="search__title n-title">Фильмы, актеры, публикации</div>
+                <div class="search__form">
+                    <div class="search__icon">{{ mixins.icon('search') }}</div>
+                    <input type="text" class="search__input" placeholder="Поиск">
+                </div>
+                <div class="search__text">Гипнотический рифф вызывает форшлаг, в таких условиях можно спокойно выпускать пластинки раз в три года</div>
+            </div>
+        </div>
+    </div>
+    {# section #}
+    <div class="section">
+        <div class="center">
+            <div class="n-title">Публикации в блоге</div>
+            <div class="blog">
+                <div class="blog__row row js-blog">
+                    <div class="blog__col">
+                        <div class="blog__group">
+                            <div class="blog__head">
+                                <div style="color: #d81e59;" class="blog__head-lines">//</div>
+                                <div class="blog__head-title">События</div>
+                            </div>
+                            <div class="blog__list"><a href="#" class="blog__link">
+                                    <div class="blog__preview"><img src="img/pic6.jpg" class="blog__pic"></div>
+                                    <div class="blog__link-title">ПРЕМЬЕРА! Самое интересное о новом сезоне "The X-Files"</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Лучшие сериалы по версии иностранной прессы Голливуда</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Великолепная десятка: победители премии "Золотой глобус - 2016"</div></a></div>
+                        </div>
+                    </div>
+                    <div class="blog__col">
+                        <div class="blog__group">
+                            <div class="blog__head">
+                                <div style="color: #8d39ce;" class="blog__head-lines">//</div>
+                                <div class="blog__head-title">Звездная жизнь</div>
+                            </div>
+                            <div class="blog__list"><a href="#" class="blog__link">
+                                    <div class="blog__preview"><img src="img/pic6.jpg" class="blog__pic"></div>
+                                    <div class="blog__link-title">ПРЕМЬЕРА! Самое интересное о новом сезоне "The X-Files"</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Лучшие сериалы по версии иностранной прессы Голливуда</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Великолепная десятка: победители премии "Золотой глобус - 2016"</div></a></div>
+                        </div>
+                    </div>
+                    <div class="blog__col">
+                        <div class="blog__group">
+                            <div class="blog__head">
+                                <div style="color: #1fd166;" class="blog__head-lines">//</div>
+                                <div class="blog__head-title">Интересные мысли</div>
+                            </div>
+                            <div class="blog__list"><a href="#" class="blog__link">
+                                    <div class="blog__preview"><img src="img/pic6.jpg" class="blog__pic"></div>
+                                    <div class="blog__link-title">ПРЕМЬЕРА! Самое интересное о новом сезоне "The X-Files"</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Лучшие сериалы по версии иностранной прессы Голливуда</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Великолепная десятка: победители премии "Золотой глобус - 2016"</div></a></div>
+                        </div>
+                    </div>
+                    <div class="blog__col">
+                        <div class="blog__group">
+                            <div class="blog__head">
+                                <div style="color: #5a78f1;" class="blog__head-lines">//</div>
+                                <div class="blog__head-title">Коллекция</div>
+                            </div>
+                            <div class="blog__list"><a href="#" class="blog__link">
+                                    <div class="blog__preview"><img src="img/pic6.jpg" class="blog__pic"></div>
+                                    <div class="blog__link-title">ПРЕМЬЕРА! Самое интересное о новом сезоне "The X-Files"</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Лучшие сериалы по версии иностранной прессы Голливуда</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Великолепная десятка: победители премии "Золотой глобус - 2016"</div></a></div>
+                        </div>
+                    </div>
+                    <div class="blog__col">
+                        <div class="blog__group">
+                            <div class="blog__head">
+                                <div style="color: #ff7e00;" class="blog__head-lines">//</div>
+                                <div class="blog__head-title">Кинолента</div>
+                            </div>
+                            <div class="blog__list"><a href="#" class="blog__link">
+                                    <div class="blog__preview"><img src="img/pic6.jpg" class="blog__pic"></div>
+                                    <div class="blog__link-title">ПРЕМЬЕРА! Самое интересное о новом сезоне "The X-Files"</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Лучшие сериалы по версии иностранной прессы Голливуда</div></a><a href="#" class="blog__link">
+                                    <div class="blog__link-title">Великолепная десятка: победители премии "Золотой глобус - 2016"</div></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog__more more">
+                    <a href="#" class="n-btn">Читать блог</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# premieres #}
+    <div class="section section_premiere">
+        <div class="center">
+            <div class="n-title">Премьеры на VIASAT</div>
+            <div class="slider">
+                <div class="slider__in js-slider2">
+                    {% for card in cards %}
+                        <a href="#" class="slider__item card card_white card_time">
+                            <div class="card__poster">
+                                <img src="{{ card.img }}" alt="">
+                            </div>
+                            <div class="card__in">
+                                <div class="card__channel">
+                                    <span class="n-channel">{{ mixins.icon('star') }}</span> {{ card.channel }}
+                                </div>
+                                <div class="card__row">
+                                    <div class="card__left">
+                                        <div class="card__title js-ellip">{{ card.title }}</div>
+                                        <div class="card__genre js-ellip">Боевик</div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="card__time">{{ card.time }}</div>
+                                        <div class="card__date">{{ card.date }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {# live soon #}
+    <div class="section">
+        <div class="center">
+            <div class="n-title">Скоро в эфире</div>
+            <div class="premieres">
+                <div class="premieres__group">
+                    <div class="premieres__head">
+                        <div class="premieres__head">
+                            <div class="premieres__head">
+                                <div class="premieres__head-title">Кино</div>
+                                <div class="premieres__head-text">Лучшие голливудские и российские фильмы последних лет. Самые яркие и запоминающиеся премьеры, лидеры проката, шедевры мирового кинематографа</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premieres__grid">
+                        <div class="premieres__grid-row row">
+                            <div class="premieres__grid-col col-50">
+                                <a href="#" class="movie movie_comedy" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/pic4.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Comedy HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Безумный Макс: Дорога ярости Безумный Макс: Дорога ярости</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">26 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_nature" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img1.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">Viasat Nature HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Восхождение Юпитер Безумный Макс: Дорога ярости</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">20:00</div>
+                                            <div class="movie__date">7 мая</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_action" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img3.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Action HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Дедушка легкого поведения</div>
+                                            <div class="movie__genre js-ellip">Комедия</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">28 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_premium" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img1.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Premium HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Восхождение</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">20:00</div>
+                                            <div class="movie__date">7 мая</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_comedy" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img2.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Comedy HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Безумный Макс: Дорога ярости</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">26 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="premieres__group">
+                    <div class="premieres__head">
+                        <div class="premieres__head">
+                            <div class="premieres__head">
+                                <div class="premieres__head-title">Познавательные</div>
+                                <div class="premieres__head-text">Самые впечатляющие и зрелищные документальные сериалы, которые погружают зрителя в мир дикой природы, исторических сенсаций, приключений и открытий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premieres__grid">
+                        <div class="premieres__grid-row row">
+                            <div class="premieres__grid-col col-50">
+                                <a href="#" class="movie movie_comedy" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/pic4.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Comedy HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Безумный Макс: Дорога ярости</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">26 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_premium" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img1.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Premium HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Восхождение Юпитер</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">20:00</div>
+                                            <div class="movie__date">7 мая</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_action" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img3.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Action HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Дедушка легкого поведения</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">28 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_premium" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img1.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Premium HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Восхождение Юпитер</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">20:00</div>
+                                            <div class="movie__date">7 мая</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_comedy" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img2.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Comedy HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Безумный Макс: Дорога ярости</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">26 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="premieres__group">
+                    <div class="premieres__head">
+                        <div class="premieres__head">
+                            <div class="premieres__head">
+                                <div class="premieres__head-title">Cпорт</div>
+                                <div class="premieres__head-text">Бокс, баскетбол, бейсбол, гонки, волейбол, американский футбол и многое другое. Популярнейшие соревнования и спортивные поединки, прямые трансляции и повторы лучших матчей</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premieres__grid">
+                        <div class="premieres__grid-row row">
+                            <div class="premieres__grid-col col-50">
+                                <a href="#" class="movie movie_comedy" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/pic4.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Comedy HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Безумный Макс: Дорога ярости</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">26 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_premium" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img1.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Premium HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Восхождение Юпитер</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">20:00</div>
+                                            <div class="movie__date">7 мая</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_action" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img3.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Action HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Дедушка легкого поведения</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">28 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_premium" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img1.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Premium HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Восхождение Юпитер</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">20:00</div>
+                                            <div class="movie__date">7 мая</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="premieres__grid-col col-25">
+                                <a href="#" class="movie movie_comedy" tabindex="0">
+                                    <div class="movie__poster">
+                                        <img src="img/img2.jpg" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">TV1000 Comedy HD</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip" data-lines="2">Безумный Макс: Дорога ярости</div>
+                                            <div class="movie__genre js-ellip">Боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">19:00</div>
+                                            <div class="movie__date">26 апреля</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <a href="#" class="n-btn">Вся телепрограмма</a>
+            </div>
+        </div>
+    </div>
+    {# selfpromo #}
+    <div style="background-image: url(img/banner-bg.jpg)" class="selfpromo">
+        <div class="selfpromo__center">
+            <div class="selfpromo__content">
+                <div class="selfpromo__logo">
+                    <img src="img/channel4.png" alt="">
+                    <p>Только лучшее кино</p>
+                </div>
+                <div class="selfpromo__btn">
+                    <button type="button" class="n-btn n-btn_blue">Подключайтесь!</button>
+                </div>
+                <ul class="selfpromo__channels">
+                    <li><img src="img/channel1.png" alt=""></li>
+                    <li><img src="img/channel2.png" alt=""></li>
+                    <li><img src="img/channel3.png" alt=""></li>
+                    <li><img src="img/channel5.png" alt=""></li>
+                    <li><img src="img/channel6.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {# banners #}
+    <div class="section section_banners">
+        <div class="center">
+            <div class="banners">
+                <div class="banners__row row">
+                    <div class="banners__col col-25">
+                        <div style="background-image: url(img/bg-banner-catalog.jpg);" class="banner">
+                            <div class="banner__wrap">
+                                <div class="banner__text">Только лучшие фильмы, сериалы, научно-популярные передачи и события из мира спорта на каналах VIASAT</div>
+                                <button href="#" class="banner__btn">ФИЛЬМОТЕКА</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banners__col col-50">
+                        <div style="background-image: url(img/bg-banner-guide.jpg);" class="banner banner_catalog">
+                            <div class="banner__wrap">
+                                <div class="banner__text">Смотрите программу вещания, устанавливайте напоминания на интересующую вас передачу или фильм</div>
+                                <button href="#" class="banner__btn">ТВ-ГИД</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banners__col col-25">
+                        <div class="banners__list">
+                            <div class="banners__list-col"><a href="#" style="background-image: url(img/bg-banner-viasat.jpg);" class="banner banner_link">
+                                    <div class="banner__wrap">
+                                        <div class="banner__title">ПОДКЛЮЧАЙТЕ КАНАЛЫ</div>
+                                        <div class="banner__logo"><img src="img/logo.png" height="30" class="banner__logo-pic"></div>
+                                    </div></a>
+                            </div>
+                            <div class="banners__list-col"><a href="#" style="background-image: url(img/bg-banner-megogonet.jpg);" class="banner banner_link">
+                                    <div class="banner__wrap">
+                                        <div class="banner__title">смотрите на</div>
+                                        <div class="banner__logo"><img src="img/logo-megogonet.png" height="18" class="banner__logo-pic"></div>
+                                    </div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe">
+                <div class="subscribe__wrap">
+                    <div class="subscribe__title n-title">Подпишитесь на&nbsp;анонсы!</div>
+                    <div class="subscribe__text">Еженедельная рассылка анонсов на телеканалах Viasat</div>
+                    <div class="subscribe__form">
+                        <input placeholder="Ваш e-mail" class="subscribe__input">
+                        <button class="subscribe__btn">ok</button>
+                    </div>
+                    <div class="subscribe__info">Мы не занимаемся рассылкой спама!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# section #}
+    <div class="section section_channels">
+        <div class="center">
+            <div class="n-channels">
+                <div class="n-channels__row js-channels2">
+                    {% for channel in channels %}
+                        <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

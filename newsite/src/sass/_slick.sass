@@ -1,0 +1,153 @@
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+
+.slick-list
+	position: relative
+	overflow: hidden
+	display: block
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	-ms-transform: translate3d(0, 0, 0)
+	-o-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+
+.slick-track
+	position: relative
+	left: 0
+	top: 0
+	display: block
+	&:before,
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	.slick-loading &
+		visibility: hidden
+
+.slick-slide
+	float: left
+	min-height: 1px
+	[dir="rtl"] &
+		float: right
+	img
+		display: block
+	&.slick-loading img
+		display: none
+	display: none
+	&.dragging img
+		pointer-events: none
+	.slick-initialized &
+		display: block
+	.slick-loading &
+		visibility: hidden
+	.slick-vertical &
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+	display: none
+
+
+.slick-slide img
+	display: inline-block
+.slick-prev,
+.slick-next
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	font-size: 0
+	width: 30px
+	height: 30px
+	color: #fff
+	border-radius: 50%
+	transition: background 200ms
+	z-index: 2
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border-radius: 50%
+		transition: opacity 200ms
+	&:after
+		content: ""
+		transition: opacity 200ms
+		opacity: 0
+	&:hover
+		&:before
+			opacity: 0
+		&:after
+			opacity: 1
+.slick-prev
+	left: 20px
+	+r(1270)
+		left: 0
+		margin-left: 0
+	+r(1024)
+		left: -25px
+	+r(768)
+		left: -10px
+	+r(470)
+		left: -8px
+.slick-next
+	right: 20px
+	+r(1270)
+		right: 0
+		margin-right: 0
+	+r(1024)
+		right: -25px
+	+r(768)
+		right: -10px
+	+r(480)
+		right: -8px
+.slick-dots
+	padding-top: 30px
+	font-size: 0
+	white-space: nowrap
+	text-align: center
+	z-index: 2
+	li
+		display: inline-block
+		&.slick-active
+			button
+				&:before
+					opacity: 1
+	button
+		width: 20px
+		height: 20px
+		font-size: 0
+		vertical-align: middle
+		&:before
+			content: ""
+			display: inline-block
+			width: 6px
+			height: 6px
+			background: #c0b9b9
+			border-radius: 50%
+			opacity: 0.5

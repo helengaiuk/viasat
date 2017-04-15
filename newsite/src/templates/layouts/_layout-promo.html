@@ -1,0 +1,29 @@
+{% import "./_mixins.html" as mixins %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "./_head.html" %}
+</head>
+<body>
+
+<!-- BEGIN content -->
+<div class="wrapper">
+    <!-- header -->
+    {% include "./../blocks/_header-promo.html" %}
+
+    <!-- page content -->
+    {% block content %}{% endblock %}
+    <!-- scrollTop btn -->
+    <button class="scrolltop js-scrolltop">{{ mixins.icon('top') }}В начало страницы</button>
+</div>
+<!-- END content -->
+
+<!-- footer -->
+{% include "./../blocks/_footer-promo.html" %}
+
+<!-- BEGIN scripts -->
+<script type="text/javascript" src="js/app.js"></script>
+<!-- END scripts -->
+
+</body>
+</html>

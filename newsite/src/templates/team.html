@@ -1,0 +1,127 @@
+---
+title: Team
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+---
+
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="container old">
+        <div class="top top_dark">
+            <div class="center">
+                <!-- breadcrumbs -->
+                <nav class="breadcrumbs breadcrumbs_white">
+                    <ul>
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Команда Viasat</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="h1">Команда Viasat</h1>
+            </div>
+        </div>
+        <div class="center">
+            <!-- main -->
+            <div class="main">
+                <article class="content">
+                    <table cellspacing="0" cellpadding="5" border="0" height="205" style="border-collapse: collapse;">
+                        <tbody>
+                        <tr>
+                            <td width="146"><img oncontextmenu="return false;" width="134" height="185" src="http://www.viasat-channels.tv/pics/kremen_tatiana.png"><br><br>
+                            </td>
+                            <td valign="top"><p><strong>Менеджер по продажам:</strong><br><br>
+                                    Татьяна Кремень
+                                    <br><br></p><p>Тел: 044 498 54 89
+                                    <br>
+                                    E-mail: <a href="mailto:tatiana.kremen@viasat.co.uk">tatiana.kremen@viasat.co.uk</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://www.viasat-channels.tv/upload/medialibrary/fd2/fd20a789f929dc8e172db00e22575056.jpg" title="dmytro_biletskyi.jpg" border="0" alt="dmytro_biletskyi.jpg" width="134" height="185"><br><br>
+                            </td>
+                            <td valign="top"><p><strong>Менеджер по продажам:</strong><br><br>
+                                    Дмитрий Билецкий
+                                    <br><br></p><p>Тел.: 044 498 54 89
+                                    <br>
+                                    E-mail: <a href="mailto:Dmytro.Biletskyi@mtg.com">Dmytro.Biletskyi@mtg.com</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://www.viasat-channels.tv/upload/medialibrary/73e/73e365351d65dfeabe9d4caf9f6f940d.jpg" title="liliya_karlova.jpg" border="0" alt="liliya_karlova.jpg" width="134" height="185"><br><br>
+                            </td>
+                            <td valign="top"><p><strong>Менеджер по продажам:</strong><br><br>
+                                    Лилия Карлова
+                                </p><p><br></p><p>Тел: 044 498 54 89
+                                    <br>
+                                    E-mail: <a href="mailto:tatiana.kremen@viasat.co.uk">liliya.karlova@viasat.co.uk</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://www.viasat-channels.tv/upload/medialibrary/53b/53b2ffed233359debc70a3eb821c72c5.png" border="0" alt="olga_suhova.png" width="134" height="185"><br><br>
+                            </td>
+                            <td valign="top"><p><strong>Менеджер по финансам:</strong><br><br>
+                                    Ольга Сухова
+                                    <br><br></p><p>Тел.: 044 498 54 89
+                                    <br>
+                                    E-mail: <a href="mailto:zoya.avdienko@viasat.co.uk">olga.suhova@viasat.co.uk</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1"><img oncontextmenu="return false;" width="134" height="185" src="http://www.viasat-channels.tv/pics/burenok_andrey.png"><br><br>
+                            </td>
+                            <td valign="top"><p><strong>Директор:</strong><br><br>
+                                    Андрей Буренок
+                                    <br><br></p><p>Тел.: 044 498 54 88
+                                    <br>
+                                    E-mail: <a href="mailto:andrey.burenok@viasat.co.uk">andrey.burenok@viasat.co.uk</a></p>
+                            </td>
+                        </tr>
+                        <tr><td colspan="1"><br></td><td valign="top"><p><br></p></td></tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+            <!-- sidebar -->
+            <aside class="sidebar">
+                <a href="#" class="subscr">Подпишитесь на анонсы</a>
+                <a href="#" class="feedback">Свяжитесь с нами</a>
+                <!-- widget -->
+                <div class="fb-widget">
+                    <img src="img/fb-widget.jpg" alt="">
+                </div>
+                <!-- banners -->
+                <div class="banner">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+            </aside>
+        </div>
+        {# section #}
+        <div class="section section_channels">
+            <div class="center">
+                <div class="n-channels">
+                    <div class="n-channels__row js-channels2">
+                        {% for channel in channels %}
+                            <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

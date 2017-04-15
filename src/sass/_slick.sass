@@ -1,0 +1,191 @@
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+.slick-list
+	position: relative
+	overflow: hidden
+	display: block
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+	.slick-loading &
+		background: white slick-image-url("ajax-loader.gif") center center no-repeat
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-slider .slick-list,
+.slick-track,
+.slick-slide, 
+.slick-slide img
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	-ms-transform: translate3d(0, 0, 0)
+	-o-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+
+.slick-track
+	position: relative
+	left: 0
+	top: 0
+	display: block
+	zoom: 1
+	&:before,
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	.slick-loading &
+		visibility: hidden
+
+.slick-slide
+	float: left
+	height: 100%
+	min-height: 1px
+	img
+		display: inline-block
+		max-width: 100%
+	&.slick-loading img
+		display: none
+	display: none
+	&.dragging img
+		pointer-events: none
+	.slick-initialized &
+		display: block
+	.slick-loading &
+		visibility: hidden
+	.slick-vertical &
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+.slick-prev,
+.slick-next
+	position: absolute
+	top: 50%
+	margin-top: -7px
+	+hide-text
+	height: 14px
+	background: none
+	z-index: 2
+	&:focus
+		outline: none
+	&.slick-disabled
+		opacity: 0.2
+	&:before
+		height: 14px
+		line-height: 14px
+	.slider &, .carousel &
+		height: 30px 
+		margin-top: -15px
+		&:before
+			height: 30px
+			line-height: 30px
+	.recommends &
+		top: 0
+		bottom: 0
+		height: auto
+		margin-top: 0
+		width: 28px
+		+tr(background 300ms)
+		&:hover
+			background: rgba(#fff, 0.2)		
+.slick-prev
+	left: -20px
+	&:before
+		content: "\e60d"
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		font-family: 'icomoon'
+		color: #fff 
+	+r(1150)
+		left: 5px	
+	.slider &, .carousel &, .gallery &
+		left: 14px
+		&:before
+			content: "\e60e"
+			font-size: 30px
+			color: #b4b4b4
+		+r(1024)
+			left: 5px
+	.carousel &, .gallery &
+		&:before
+			color: #fff		
+	.recommends &
+		left: -26px	
+		&:before
+			content: "\e60e"
+			font-size: 18px
+			color: #fff
+		+r(768)
+			left: -10px			
+.slick-next
+	right: -20px
+	&:before
+		content: "\e60a"
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		font-family: 'icomoon'
+		color: #fff 
+	+r(1150)
+		right: 5px	
+	.slider &, .carousel &, .gallery &
+		right: 14px
+		&:before
+			content: "\e60b"
+			font-size: 30px
+			color: #b4b4b4
+		+r(1024)
+			right: 5px	
+	.carousel &, .gallery &
+		&:before
+			color: #fff
+	.recommends &
+		right: -26px
+		&:before
+			content: "\e60b"
+			font-size: 18px
+			color: #fff
+		+r(768)
+			right: -10px					
+.slick-dots
+	text-align: center
+	position: absolute
+	margin: 0
+	bottom: -15px
+	left: 0
+	right: 0
+	li
+		position: relative
+		display: inline-block
+		padding: 0 3px 
+		&.slick-active
+			button
+				background: #b4b4b4 
+		&:before
+			display: none 
+				 
+	button
+		display: block
+		width: 6px
+		height: 6px
+		background: #fff
+		cursor: pointer
+		+hide-text
+		border-radius: 50% 
+	

@@ -1,0 +1,231 @@
+---
+title: Category
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+cards:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="out">
+        <div class="topper" style="background-image: url(img/topper2.jpg)">
+            <div class="topper__in">
+                <div class="center">
+                    {# nav #}
+                    <nav class="breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Фильмoтека</a></li>
+                            <li>Фильмы</li>
+                        </ul>
+                    </nav>
+                    <div class="topper__head">
+                        <div class="topper__left">
+                            <h1 class="n-h1">Фильмы</h1>
+                        </div>
+                        <div class="topper__right">
+                            <ul class="n-socials">
+                                <li><a href="#">{{ mixins.icon('fb') }}</a></li>
+                                <li><a href="#">{{ mixins.icon('vk') }}</a></li>
+                                <li><a href="#">{{ mixins.icon('instagram') }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="s">
+                        <form>
+                            <label class="s__field">
+                                <input type="text" role="search" placeholder="Поиск">
+                            </label>
+                            <button class="s__submit" type="submit">{{ mixins.icon('search') }}</button>
+                        </form>
+                    </div>
+                    <div class="topper__bottom">
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#" class="active">Все фильмы</a></li>
+                                <li><a href="#">Новинки</a></li>
+                                <li><a href="#">Популярные</a></li>
+                            </ul>
+                        </nav>
+                        <div class="filters">
+                            <form action="#" class="js-filters-form">
+                                <div class="filters__left">
+                                    <div class="filters__title">Сортировать по:</div>
+                                    <button class="apply" type="button">Применить</button>
+                                    <button class="reset js-filters-reset" type="reset">Сбросить</button>
+                                </div>
+                                <div class="filters__right">
+                                    <div class="filter__item">
+                                        <select class="js-select2" style="width: 100%" data-placeholder="Жанр">
+                                            <option></option>
+                                            <option value="Драма">Драма</option>
+                                            <option value="Мелодрама">Мелодрама</option>
+                                            <option value="Комедия">Комедия</option>
+                                            <option value="Боевик">Боевик</option>
+                                            <option value="Вестерн">Вестерн</option>
+                                            <option value="Военный">Военный</option>
+                                            <option value="Ужасы">Ужасы</option>
+                                            <option value="Фантастика">Фантастика</option>
+                                            <option value="Семейный">Семейный</option>
+                                            <option value="История">История</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter__item">
+                                        <select class="js-select2" style="width: 100%" data-placeholder="Страна производства">
+                                            <option></option>
+                                            <option value="Австрия">Австрия</option>
+                                            <option value="Болгария">Болгария</option>
+                                            <option value="Венгрия">Венгрия</option>
+                                            <option value="Испания">Испания</option>
+                                            <option value="Италия">Италия</option>
+                                            <option value="Канада">Канада</option>
+                                            <option value="Мексика">Мексика</option>
+                                            <option value="США">США</option>
+                                            <option value="Испания">Испания</option>
+                                            <option value="Италия">Италия</option>
+                                            <option value="Исландия">Исландия</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter__item">
+                                        <select class="js-select2" style="width: 100%" data-placeholder="Год выпуска">
+                                            <option></option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2003">2003</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# main page content #}
+        <div class="main">
+            <div class="center">
+
+                <div class="catalog">
+                    <div class="catalog__in">
+                        {% for card in cards %}
+                            <a href="#" class="card">
+                                <div class="card__poster">
+                                    <img src="{{ card.img }}" alt="">
+                                </div>
+                                <div class="card__in">
+                                    <div class="card__title js-ellip">{{ card.title }}</div>
+                                    <div class="card__about">
+                                        <p class="js-ellip">{{ card.genre }}</p>
+                                        <p class="js-ellip">{{ card.country }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                    <div class="more">
+                        <a href="#" class="n-btn n-btn_small n-btn_white">Показать еще</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# section #}
+    <div class="section section_channels">
+        <div class="center">
+            <div class="n-channels">
+                <div class="n-channels__row js-channels2">
+                    {% for channel in channels %}
+                        <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

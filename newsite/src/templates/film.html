@@ -1,0 +1,819 @@
+---
+title: Film
+actors:
+- img: 'img/actor1.jpg'
+  name: 'Майлз Теллер'
+  role: 'Эндрю Ниман'
+- img: 'img/actor2.jpg'
+  name: 'Дж. К. Симмонс'
+  role: 'Теренс Флетчер'
+- img: 'img/actor3.jpg'
+  name: 'Мелисса Беноист'
+  role: 'Николь'
+- img: 'img/actor2.jpg'
+  name: 'Дж. К. Симмонс'
+  role: 'Теренс Флетчер'
+posters:
+- img: 'img/poster.jpg'
+  dimensions: '800х1200'
+  size: '500 kb'
+- img: 'img/poster2.jpg'
+  dimensions: '800х1200'
+  size: '3 MB'
+- img: 'img/poster3.jpg'
+  dimensions: '800х1200'
+  size: '500 kb'
+- img: 'img/poster4.jpg'
+  dimensions: '800х1200'
+  size: '760 kb'
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+movies:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия'
+  country: 'США, 2014'
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="out out_film">
+        <div class="topper">
+            <div class="blurred" style="background-image: url(img/film1.jpg)"></div>
+            <div class="topper__in">
+                <div class="center">
+                    {# nav #}
+                    <nav class="breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Фильмoтека</a></li>
+                            <li>Фильмы</li>
+                        </ul>
+                    </nav>
+                    <div class="topper__head">
+                        <div class="topper__left">
+                            <h1 class="n-h1">Одержимость</h1>
+                            <div class="subtitle">Whiplash</div>
+                        </div>
+                       <div class="topper__right">
+                           <ul class="n-socials">
+                               <li><a href="#">{{ mixins.icon('fb') }}</a></li>
+                               <li><a href="#">{{ mixins.icon('vk') }}</a></li>
+                               <li><a href="#">{{ mixins.icon('instagram') }}</a></li>
+                           </ul>
+                       </div>
+                    </div>
+                    <div class="film-main">
+                        <div class="film-main__about">
+                            <div class="film-main__item">
+                                <ul>
+                                    <li>2014</li>
+                                </ul>
+                            </div>
+                            <div class="film-main__item">
+                                <ul>
+                                    <li>США</li>
+                                    <li>Англия</li>
+                                    <li>Франция</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="film-main__item">
+                                <ul class="film-main__genre">
+                                    <li>Драма</li>
+                                    <li>Музыка</li>
+                                    <li>Комедия</li>
+                                    <li>Боевик</li>
+                                </ul>
+                            </div>
+                            <div class="film-main__item">
+                                <ul>
+                                    <li>107 мин.</li>
+                                </ul>
+                            </div>
+                            <div class="film-main__item">
+                                <ul>
+                                    <li>16+</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topper__bottom">
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#">Постеры</a></li>
+                                <li><a href="#">Кадры и цитаты</a></li>
+                                <li><a href="#">Трейлеры</a></li>
+                                <li><a href="#">Награды</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# main page content #}
+        <div class="main">
+            <div class="center">
+                <div class="film">
+                    <div class="film__left">
+                        <div class="film__row">
+                            <div class="film__col">
+                                <div class="film__poster">
+                                    <img src="img/poster.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="film__col">
+                                <div class="n-awards">
+                                    <div class="n-awards__item">
+                                        <img src="img/oscar.png" class="n-awards__img" alt="">
+                                        <div class="n-awards__counter">x<span>3</span></div>
+                                        <div class="n-awards__title">
+                                            <p>Премия</p>
+                                            <strong>“Оскар”</strong>
+                                        </div>
+                                    </div>
+                                    <div class="n-awards__item">
+                                        <img src="img/golden-globe.png" class="n-awards__img" alt="">
+                                        <div class="n-awards__title">
+                                            <p>Премия</p>
+                                            <strong>“Золотой глобус”</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="film__row">
+                            <div class="film__col">
+                                <div class="socials">
+                                    <div class="socials__likes">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="icon-like"></i><span>713</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-dislike"></i><span>3</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="rating rating_small">
+                                    <div class="rating__item js-rating">
+                                        <div class="js-rating-select"></div>
+                                        <div class="rating__value js-rating-value">0.0</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="film__col">
+                                {# rating #}
+                                <div class="film__rating">
+                                    <h4 class="n-h4">Рейтинг</h4>
+                                    <div class="rating">
+                                        <div class="rating__title">IMDB</div>
+                                        <div class="rating__item">
+                                            <ul class="rating__stars">
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-empty') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-empty') }}</li>
+                                                <li class="star">{{ mixins.icon('star-empty') }}</li>
+                                            </ul>
+                                            <div class="rating__value">9.1</div>
+                                        </div>
+                                    </div>
+                                    <div class="rating">
+                                        <div class="rating__title">Кинопоиск</div>
+                                        <div class="rating__item">
+                                            <ul class="rating__stars">
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-empty') }}</li>
+                                                <li class="star">{{ mixins.icon('star-empty') }}</li>
+                                                <li class="star">{{ mixins.icon('star-empty') }}</li>
+                                            </ul>
+                                            <div class="rating__value">9.1</div>
+                                        </div>
+                                    </div>
+                                    <div class="rating">
+                                        <div class="rating__title">Rotten Tomatoes</div>
+                                        <div class="rating__item">
+                                            <ul class="rating__stars">
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star">{{ mixins.icon('star-full') }}</li>
+                                                <li class="star">{{ mixins.icon('star-full') }}</li>
+                                            </ul>
+                                            <div class="rating__value">95%</div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-hint">положительных рецензий кинокритиков</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team js-wrap">
+                            <div class="headline js-wrap-btn">Команда</div>
+                            <div class="team__wrap js-wrap-cont">
+                                <div class="team__block">
+                                    <div class="team__row">
+                                        <div class="team__left">Режиссер:</div>
+                                        <div class="team__right">Дэмьен Шазелл</div>
+                                    </div>
+                                    <div class="team__row">
+                                        <div class="team__left">Сценарий:</div>
+                                        <div class="team__right">Дэмьен Шазелл</div>
+                                    </div>
+                                    <div class="team__row">
+                                        <div class="team__left">Продюсер:</div>
+                                        <div class="team__right">
+                                            <p>Джейсон Блум</p>
+                                            <p>Хелен Блум</p>
+                                            <p>Дэвид Ланкастер</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__block">
+                                    <div class="team__row">
+                                        <div class="team__left">Оператор:</div>
+                                        <div class="team__right">Дэмьен Шазелл</div>
+                                    </div>
+                                    <div class="team__row">
+                                        <div class="team__left">Композитор:</div>
+                                        <div class="team__right">Дэмьен Шазелл</div>
+                                    </div>
+                                    <div class="team__row">
+                                        <div class="team__left">Художник:</div>
+                                        <div class="team__right">
+                                            <p>Джейсон Блум</p>
+                                            <p>Хелен Блум</p>
+                                            <p>Дэвид Ланкастер</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__block">
+                                    <div class="team__row">
+                                        <div class="team__left">Монтаж:</div>
+                                        <div class="team__right">Дэмьен Шазелл</div>
+                                    </div>
+                                    <!-- <div class="team__row">
+                                        <div class="team__left">Бюджет:</div>
+                                        <div class="team__right">$3 300 000</div>
+                                    </div>
+                                    <div class="team__row">
+                                        <div class="team__left">Сборы в мире:</div>
+                                        <div class="team__right">$48 982 041</div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team js-wrap">
+                            <div class="headline js-wrap-btn">Бюджет</div>
+                            <div class="team__wrap js-wrap-cont">
+                                <div class="team__block">
+                                    <div class="team__row">
+                                        <div class="team__left is-hide">Бюджет:</div>
+                                        <div class="team__right is-main">$3 300 000</div>
+                                    </div>
+                                    <div class="team__row">
+                                        <div class="team__left">Сборы в мире:</div>
+                                        <div class="team__right is-bold">$48 982 041</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <p>Дорога к величию может привести вас к краю...</p>
+                        </div>
+                    </div>  
+                        
+                    
+                    <div class="film__right">
+                        {# watch at #}
+                        <div class="n-watch">
+                            <div class="n-watch__btn"><p>Сожалеем, этого фильма нет в программе. Актуальные анонсы смотрите в <a href="#">"Фильмотеке"</a>.</p></div>
+                        </div>
+                        {# feedback #}
+                        <div class="feedback">
+                            <a href="#" class="subscribe-link">Свяжитесь с нами</a>
+                            <a href="#" class="feedback-link">Подпишитесь на анонсы</a>
+
+                        </div>
+
+                        {# actors #}
+                        <div class="actors">
+                            <div class="actors__main">
+                                <div class="actors__topper">
+                                    <h4 class="n-h4">В ролях:</h4>
+                                </div>
+                                <div class="actors__list js-sctors-slider">
+                                    <div class="actors__slide">
+                                        {% for actor in actors %}
+                                            <div class="actors__item">
+                                                <div class="actors__img">
+                                                    <img src="{{ actor.img }}" alt="">
+                                                </div>
+                                                <div class="actors__about">
+                                                    <div class="actors__name">{{ actor.name }}</div>
+                                                    <div class="actors__role">...{{ actor.role }}</div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="actors__slide">
+                                        {% for actor in actors %}
+                                            <div class="actors__item">
+                                                <div class="actors__img">
+                                                    <img src="{{ actor.img }}" alt="">
+                                                </div>
+                                                <div class="actors__about">
+                                                    <div class="actors__name">{{ actor.name }}</div>
+                                                    <div class="actors__role">...{{ actor.role }}</div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film__main">
+                        {# story #}
+                        <div class="story js-wrap">
+                            <div class="story__head">
+                                <div class="headline js-wrap-btn">Сюжет</div>
+                            </div>
+                            <div class="story__topper">
+                                <div class="n-awards">
+                                    <div class="n-awards__item">
+                                        <img src="img/oscar.png" class="n-awards__img" alt="">
+                                        <div class="n-awards__counter">x<span>3</span></div>
+                                        <div class="n-awards__title">
+                                            <p>Премия</p>
+                                            <strong>“Оскар”</strong>
+                                        </div>
+                                    </div>
+                                    <div class="n-awards__item">
+                                        <img src="img/golden-globe.png" class="n-awards__img" alt="">
+                                        <div class="n-awards__title">
+                                            <p>Премия</p>
+                                            <strong>“Золотой глобус”</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="n-h4">Сюжет</h4>
+                            </div>
+                            <div class="story__article js-wrap-cont">
+                                <p>Молодой и перспективный барабанщик стремится любым способом взобраться на вершину музыкального олимпа. И его мечта, кажется, совсем скоро станет явью. Он попадает в ведущий оркестр страны и будет учиться у знаменитого дирижера и настоящего профессионала своего дела.</p>
+                                <p>Однако жестокие методы нового наставника навсегда меняют жизнь талантливого парня. А его желание отточить мастерство до совершенства быстро перерастает в одержимость.</p>
+                            </div>
+                        </div>
+                        {# rating #}
+                        <div class="film__rating">
+                            <h4 class="n-h4">Рейтинг</h4>
+                            <div class="rating">
+                                <div class="rating__title">IMDB</div>
+                                <div class="rating__item">
+                                    <ul class="rating__stars">
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-empty') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-empty') }}</li>
+                                        <li class="star">{{ mixins.icon('star-empty') }}</li>
+                                    </ul>
+                                    <div class="rating__value">9.1</div>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <div class="rating__title">Кинопоиск</div>
+                                <div class="rating__item">
+                                    <ul class="rating__stars">
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-empty') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-empty') }}</li>
+                                        <li class="star">{{ mixins.icon('star-empty') }}</li>
+                                    </ul>
+                                    <div class="rating__value">9.1</div>
+                                </div>
+                            </div>
+                            <div class="rating rating_rotten">
+                                <div class="rating__title">Rotten Tomatoes</div>
+                                <div class="rating__item">
+                                    <ul class="rating__stars">
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star active">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star">{{ mixins.icon('star-full') }}</li>
+                                        <li class="star">{{ mixins.icon('star-full') }}</li>
+                                    </ul>
+                                    <div class="rating__value">50%</div>
+                                </div>
+                            </div>
+                            <div class="rating-hint">положительных рецензий кинокритиков</div>
+                        </div>
+                    </div>
+                </div>
+                    {# facts #}
+                    <div class="facts">
+
+                        <div class="facts__slider js-facts">
+                            <div class="facts__slide">
+                                <div class="facts__img"></div>
+                                <div class="facts__in">
+                                    <h4 class="n-h4 n-h4_white">Интересные факты</h4>
+                                    <div class="facts__text">
+                                        <p>Режиссер фильма Дэмьен Шазелл включил в фильм
+                                            немало автобиографических деталей.
+                                            Еще в школе он стремился стать успешным барабанщиком
+                                            и также занимался у деспотичного преподавателя.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="facts__slide">
+                                <div class="facts__img"></div>
+                                <div class="facts__in">
+                                    <h4 class="n-h4 n-h4_white">Интересные факты</h4>
+                                    <div class="facts__text">
+                                        <p>Режиссер фильма Дэмьен Шазелл включил в фильм
+                                            немало автобиографических деталей.
+                                            Еще в школе он стремился стать успешным барабанщиком
+                                            и также занимался у деспотичного преподавателя.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# trailer #}
+                    <div class="n-trailer js-wrap">
+                        <div class="headline js-wrap-btn">Трейлер</div>
+                        <div class="n-trailer__in js-wrap-cont">
+                            <div class="n-trailer__video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7d_jQycdQGo" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    {# quotes #}
+                    <div class="quotes">
+                        <div class="headline">Кадры и цитаты</div>
+                        <div class="quotes__slider js-quotes">
+                            <div class="quotes__slide">
+                                <div class="quotes__cell">
+                                    <div class="quotes__img">
+                                        <img src="img/quotes1.jpg" alt="">
+                                    </div>
+                                    <div class="quotes__content">
+                                        <div class="quotes__bg" style="background-image: url(img/quotes2.jpg)"></div>
+                                        <div class="quote">
+                                            <p>Я хотел, чтобы вы преодолели пределы
+                                                ожидаемого. Я думаю, что это абсолютно
+                                                необходимо. Иначе мы лишим мир нового
+                                                Луи Армстронга, нового Чарли Паркера.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quotes__slide">
+                                <div class="quotes__cell">
+                                    <div class="quotes__img">
+                                        <img src="img/quotes4.jpg" alt="">
+                                    </div>
+                                    <div class="quotes__content">
+                                        <div class="quotes__bg" style="background-image: url(img/quotes3.jpg)"></div>
+                                        <div class="quote">
+                                            <p>Убеждаюсь все больше, нет в нашем языке слова вреднее и опаснее чем «молодец».</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quotes__slide">
+                                <div class="quotes__cell">
+                                    <div class="quotes__img">
+                                        <img src="img/quotes1.jpg" alt="">
+                                    </div>
+                                    <div class="quotes__content">
+                                        <div class="quotes__bg" style="background-image: url(img/quotes2.jpg)"></div>
+                                        <div class="quote">
+                                            <p>Я хотел, чтобы вы преодолели пределы
+                                                ожидаемого. Я думаю, что это абсолютно
+                                                необходимо. Иначе мы лишим мир нового
+                                                Луи Армстронга, нового Чарли Паркера.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quotes__slide">
+                                <div class="quotes__cell">
+                                    <div class="quotes__img">
+                                        <img src="img/quotes4.jpg" alt="">
+                                    </div>
+                                    <div class="quotes__content">
+                                        <div class="quotes__bg" style="background-image: url(img/quotes3.jpg)"></div>
+                                        <div class="quote">
+                                            <p>Убеждаюсь все больше, нет в нашем языке слова вреднее и опаснее чем «молодец».</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# posters #}
+                    <div class="n-posters">
+                        <div class="headline">Постеры</div>
+                        <div class="n-posters__list js-posters">
+                            {% for poster in posters %}
+                                <div class="n-poster">
+                                    <div class="n-poster__img">
+                                        <img src="{{ poster.img }}" width="214" height="325" alt="">
+                                    </div>
+                                    <div class="n-poster__size">{{ poster.dimensions }} px</div>
+                                    <a href="#" class="n-poster__download">{{ mixins.icon('download') }} {{ poster.size }}</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {# rewards #}
+                    <div class="rewards">
+                        <div class="headline">Награды</div>
+                        <div class="rewards__in">
+                            <div class="rewards__list js-rewards-slider">
+                                <div class="reward">
+                                    <div class="reward__in">
+                                        <div class="reward__img">
+                                            <img src="img/oscar-reward.png" alt="">
+                                        </div>
+                                        <div class="reward__year">2015</div>
+                                        <div class="reward__name">ОСКАР</div>
+                                        <ul class="reward__titles">
+                                            <li>Лучшая мужская
+                                                роль второго плана
+                                                (Дж. К. Симмонс)</li>
+                                            <li>Лучший звук и монтаж</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reward">
+                                    <div class="reward__in">
+                                        <div class="reward__img">
+                                            <img src="img/globe-reward.png" alt="">
+                                        </div>
+                                        <div class="reward__year">2015</div>
+                                        <div class="reward__name">золотой глобус</div>
+                                        <ul class="reward__titles">
+                                            <li>Лучшая мужская
+                                                роль второго плана
+                                                (Дж. К. Симмонс)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reward">
+                                    <div class="reward__in">
+                                        <div class="reward__img">
+                                            <img src="img/globe-reward.png" alt="">
+                                        </div>
+                                        <div class="reward__year">2015</div>
+                                        <div class="reward__name">bafta</div>
+                                        <ul class="reward__titles">
+                                            <li>Лучшая мужская
+                                                роль второго плана
+                                                (Дж. К. Симмонс)</li>
+                                            <li>Лучший звук и монтаж</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reward">
+                                    <div class="reward__in">
+                                        <div class="reward__img">
+                                            <img src="img/globe-reward.png" alt="">
+                                        </div>
+                                        <div class="reward__year">2015</div>
+                                        <div class="reward__name">bafta</div>
+                                        <ul class="reward__titles">
+                                            <li>Лучшая мужская
+                                                роль второго плана
+                                                (Дж. К. Симмонс)</li>
+                                            <li>Лучший звук и монтаж</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reward">
+                                    <div class="reward__in">
+                                        <div class="reward__img">
+                                            <img src="img/globe-reward.png" alt="">
+                                        </div>
+                                        <div class="reward__year">2015</div>
+                                        <div class="reward__name">bafta</div>
+                                        <ul class="reward__titles">
+                                            <li>Лучшая мужская
+                                                роль второго плана
+                                                (Дж. К. Симмонс)</li>
+                                            <li>Лучший звук и монтаж</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments">
+                    <div class="comments__in">
+                        <div class="headline">Отзывы зрителей</div>
+                        <div class="comments__wrap">
+                            <form action="#" class="comments__form">
+                                <p>Оставьте Ваш отзыв о фильме</p>
+                                <input type="text" class="comments__input" placeholder="Ваше имя">
+                                <textarea class="comments__input" placeholder="Ваш комметарий..."></textarea>
+                                <div class="comments__bottom">
+                                    <div class="comments__captcha">
+                                        <img src="img/captcha.jpg" alt="">
+                                    </div>
+                                    <div class="comments__submit">
+                                        <button type="submit" class="comments__btn">Отправить</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="comments__list">
+                                <div class="comment">
+                                    <div class="comment__user">
+                                        <img src="img/no-user.png" alt="">
+                                    </div>
+                                    <div class="comment__text">
+                                        <strong>Марина</strong>
+                                        <p>Браво! Великолепный фильм, который учит идти к цели несмотря ни на что. Пусть тебя осыпают насмешками, придирками и укорами – ты все равно идешь вперед и добиваешься своего!</p>
+                                    </div>
+                                    <ul class="comment__options">
+                                        <li><button>{{ mixins.icon('back') }}</button></li>
+                                        <li><button>{{ mixins.icon('edit') }}</button></li>
+                                        <li><button>{{ mixins.icon('trash') }}</button></li>
+                                    </ul>
+                                </div>
+                                <div class="comment">
+                                    <div class="comment__user">
+                                        <img src="img/no-user.png" alt="">
+                                    </div>
+                                    <div class="comment__text">
+                                        <strong>Марина</strong>
+                                        <p>Гениальнейшая актерская игра Дж. К. Симмонса и Майлза Теллера достойна аплодисментов. Они показали просто гигантский спектр эмоций. Обязательно рекомендую к просмотру.</p>
+                                    </div>
+                                    <ul class="comment__options">
+                                        <li><button>{{ mixins.icon('back') }}</button></li>
+                                        <li><button>{{ mixins.icon('edit') }}</button></li>
+                                        <li><button>{{ mixins.icon('trash') }}</button></li>
+                                    </ul>
+                                </div>
+                                <div class="comment">
+                                    <div class="comment__user">
+                                        <img src="img/no-user.png" alt="">
+                                    </div>
+                                    <div class="comment__text">
+                                        <strong>Марина</strong>
+                                        <p>Очень сильная история о силе воли, крепости характера и стремлении к цели. Шикарный фильм с крутыми поворотами и потрясающей концовкой. По моему мнению, этот фильм – лучший из всех!</p>
+                                    </div>
+                                    <ul class="comment__options">
+                                        <li><button>{{ mixins.icon('back') }}</button></li>
+                                        <li><button>{{ mixins.icon('edit') }}</button></li>
+                                        <li><button>{{ mixins.icon('trash') }}</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#" class="comments__more">Показать все отзывы {{ mixins.icon('right') }}</a>
+                        </div>
+                    </div>
+                    <div class="comments__aside">
+                        <div class="share">
+                            <img src="img/share-fb.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# tvshows #}
+            <div class="tvshows tvshows_gray">
+                <div class="center">
+                    <div class="headtitle">ИНТЕРЕСНОЕ НА ЭТОЙ НЕДЕЛЕ</div>
+                    <div class="tvshows__slider js-tvshow">
+                        {% for movie in movies %}
+                            <div class="tvshows__item">
+                                <a href="#" class="movie movie_{{ movie.color }}">
+                                    <div class="movie__poster">
+                                        <img src="{{ movie.img }}" alt="">
+                                    </div>
+                                    <div class="movie__in">
+                                        <div class="movie__channel">{{ movie.channel }}</div>
+                                        <div class="movie__left">
+                                            <div class="movie__title js-ellip">{{ movie.title }}</div>
+                                            <div class="movie__genre js-ellip">боевик</div>
+                                        </div>
+                                        <div class="movie__right">
+                                            <div class="movie__time">{{ movie.time }}</div>
+                                            <div class="movie__date">{{ movie.date }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {# section #}
+            <div class="section section_channels">
+                <div class="center">
+                    <div class="n-channels">
+                        <div class="n-channels__row js-channels2">
+                            {% for channel in channels %}
+                                <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

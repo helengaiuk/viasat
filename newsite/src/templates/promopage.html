@@ -1,0 +1,303 @@
+---
+title: Promopage
+cards:
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: img/img2.jpg
+  channel: 'TV1000 Comedy HD'
+  title: 'Безумный Макс: Дорога ярости'
+  time: '19:00'
+  date: '26 апреля'
+  color: comedy
+  genre: 'Комедия'
+  country: 'США, 2014'
+- img: 'img/img3.jpg'
+  channel: 'TV1000 Action HD'
+  title: 'Дедушка легкого поведения'
+  time: '19:00'
+  date: '28 апреля'
+  color: action
+  genre: 'Комедия, Драма, Семейный'
+  country: 'Великобритания, 2011'
+- img: 'img/img1.jpg'
+  channel: 'TV1000 Premium HD'
+  title: 'Восхождение Юпитер'
+  time: '20:00'
+  date: '7 мая'
+  color: premium
+  genre: 'Комедия'
+  country: 'США, 2014'
+programs:
+- color: 'blue'
+  img: 'img/promo-img1.jpg'
+  channel: 'TV1000'
+  image: 'img/channel4.png'
+  text: "Премиальный канал для взыскательных киноманов. Смотрите первыми эксклюзивные телепремьеры крупнейших киностудий Голливуда, удостоенные престижными наградами."
+- color: 'violet'
+  img: 'img/promo-img2.jpg'
+  channel: 'TV1000 Premium HD'
+  image: 'img/channel1.png'
+  text: "Каждый месяц – громкие премьеры, специальные тематические подборки фильмов и дни известнейших кинофраншиз, покоривших сердца миллионов."
+- color: 'blue'
+  img: 'img/promo-img3.jpg'
+  channel: 'TV1000 Megahit HD'
+  image: 'img/channel2.png'
+  text: "Смотрите первоклассные комедии с отличным юмором и лучшими комедийными актерами. TV1000 Comedy HD – заряд бодрости и хорошего настроения в режиме нон-стоп!"
+- color: 'blue'
+  img: 'img/promo-img1.jpg'
+  channel: 'TV1000'
+  image: 'img/channel4.png'
+  text: "Лучший киноканал в Украине! Культовая классика, лауреаты престижных кинопремий или кинохиты последних лет – выбирайте кино на свой вкус и наслаждайтесь просмотром!"
+- color: 'violet'
+  img: 'img/promo-img2.jpg'
+  channel: 'TV1000 Premium HD'
+  image: 'img/channel1.png'
+  text: "Захватывающие блокбастеры, реалистичные военные драмы и леденящие кровь триллеры – с уникальным каналом TV1000 Action вам обеспечены незабываемые эмоции!"
+- color: 'blue'
+  img: 'img/promo-img3.jpg'
+  channel: 'TV1000 Megahit HD'
+  image: 'img/channel2.png'
+  text: "Самый большой выбор \"нашего\" кино – от заученных наизусть классических шедевров советского кинематографа до новейших фильмов известных украинских и российских режиссеров."
+---
+
+{% extends "./layouts/_layout-promo.html" %}
+
+{% block content %}
+    {# topper #}
+    <div class="topper topper_promo" style="background-image: url(img/promo-topper.jpg);">
+        <div class="topper__in">
+            <div class="center">
+                <div class="topper__head">
+                    <div class="topper__left">
+                        <h1 class="n-h1">Каналы TV1000</h1>
+                        <div class="subtitle">Только лучшее кино</div>
+                    </div>
+                    <div class="topper__right">
+                        <ul class="n-socials">
+                            <li><a href="#">{{ mixins.icon('fb') }}</a></li>
+                            <li><a href="#">{{ mixins.icon('vk') }}</a></li>
+                            <li><a href="#">{{ mixins.icon('instagram') }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="topper__min">
+                    <a href="#" class="n-btn n-btn_blue n-btn_small">Подключайтесь!</a>
+                </div>
+                <div class="n-carousel">
+                    <div class="n-carousel__title">Премьеры на каналах:</div>
+                    <div class="n-carousel__slider js-promopage">
+                        {% for i in range(0,6) %}
+                            <a href="#" class="n-carousel__slide">
+                                <div class="n-carousel__img">
+                                    <img src="img/carousel1.jpg" alt="">
+                                </div>
+                                <div class="n-carousel__in">
+                                    <div class="n-carousel__info">
+                                        <div class="n-carousel__name">Игра престолов</div>
+                                        <div class="n-carousel__time">21:00</div>
+                                        <div class="n-carousel__date">29 апреля</div>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# our channels #}
+    <div class="n-programs">
+        <div class="center n-programs__in">
+            <h2 class="n-programs__title">Наши каналы</h2>
+            <div class="n-programs__list">
+                {% for program in programs %}
+                    <a href="#" class="n-program n-program_{{ program.color }}">
+                        <div class="n-program__title">{{ program.channel }} <span class="go">{{ mixins.icon('arr-right') }}</span></div>
+                        <div class="n-program__img">
+                            <img class="n-program__poster" src="{{ program.img }}" alt="">
+                            <img class="n-program__channel-image" src="{{ program.image }}" alt="">
+                        </div>
+                        <div class="n-program__about">{{ program.text }}</div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {# benefits #}
+    <div class="n-benefits" style="background-image: url(img/benefits2.jpg)">
+        <div class="center">
+            <div class="n-benefits__title">Почему мы лучшие</div>
+            <div class="n-benefits__in">
+                <div class="n-benefits__list">
+                    <div class="n-benefits__item">
+                        <div class="n-benefits__view"><span>№1</span></div>
+                        <div class="n-benefits__text">в сегменте "кино"</div>
+                    </div>
+                    <div class="n-benefits__item">
+                        <div class="n-benefits__view"><span>12</span> лет</div>
+                        <div class="n-benefits__text">на рынке</div>
+                    </div>
+                    <div class="n-benefits__item">
+                        <div class="n-benefits__view">{{ mixins.icon('ukraine') }}</div>
+                        <div class="n-benefits__text">Покрытие – вся Украина</div>
+                    </div>
+                    <div class="n-benefits__item">
+                        <div class="n-benefits__view"><span>24/7</span></div>
+                        <div class="n-benefits__text">24 часа в сутки,<br> 7 дней в неделю</div>
+                    </div>
+                    <div class="n-benefits__item">
+                        <div class="n-benefits__view">{{ mixins.icon('mute') }}</div>
+                        <div class="n-benefits__text">Без рекламы</div>
+                    </div>
+                    <div class="n-benefits__item wide">
+                        <div class="n-benefits__view">{{ mixins.icon('rounds') }}</div>
+                        <div class="n-benefits__text">Уникальные и премиальные каналы</div>
+                    </div>
+                    <div class="n-benefits__item wide">
+                        <div class="n-benefits__view">{{ mixins.icon('premiere') }}</div>
+                        <div class="n-benefits__text">Каждый вечер – премьера</div>
+                    </div>
+                    <div class="n-benefits__item wide">
+                        <div class="n-benefits__view">{{ mixins.icon('hd') }}</div>
+                        <div class="n-benefits__text">Изображение высокого качества</div>
+                    </div>
+                    <div class="n-benefits__item wide">
+                        <div class="n-benefits__view">{{ mixins.icon('sound') }}</div>
+                        <div class="n-benefits__text">Объемный звук<br> Dolby Digital 5.1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="n-benefits__exclusive">
+            <div class="center">
+                <div class="n-benefits__subtitle">Эксклюзивный показ фильмов</div>
+                <div class="exclusive">
+                    <div class="exclusive__item">
+                        <img src="img/warner_bros_pictures.png" width="110" alt="">
+                    </div>
+                    <div class="exclusive__item">
+                        <img src="img/sony_pictures.png" width="70" alt="">
+                    </div>
+                    <div class="exclusive__item">
+                        <img src="img/20th_century_fox.png" width="100" alt="">
+                    </div>
+                    <div class="exclusive__item">
+                        <img src="img/Universal_Studios_Logo.png" width="130" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# follow us #}
+    <div class="follow">
+        <div class="center follow__in">
+            <div class="follow__title">Подпишитесь на анонсы</div>
+            <div class="follow__form">
+                <form action="#">
+                    <input type="email" placeholder="Ваш e-mail">
+                    <button type="submit">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {# premieres #}
+    <div class="section section_premiere">
+        <div class="center">
+            <div class="n-title">Интересное на этой неделе</div>
+            <div class="slider">
+                <div class="slider__in js-slider2">
+                    {% for card in cards %}
+                        <a href="#" class="slider__item card card_white card_time">
+                            <div class="card__poster">
+                                <img src="{{ card.img }}" alt="">
+                            </div>
+                            <div class="card__in">
+                                <div class="card__channel">
+                                    <span class="n-channel">{{ mixins.icon('star') }}</span> {{ card.channel }}
+                                </div>
+                                <div class="card__row">
+                                    <div class="card__left">
+                                        <div class="card__title js-ellip">{{ card.title }}</div>
+                                        <div class="card__genre js-ellip">Боевик</div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="card__time">{{ card.time }}</div>
+                                        <div class="card__date">{{ card.date }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {# live soon #}
+    <div class="section">
+        <div class="center">
+            <div class="n-title">Сейчас на канале</div>
+            <div class="slider slider_dark">
+                <div class="slider__in js-slider2">
+                    {% for card in cards %}
+                        <a href="#" class="slider__item card card_{{ card.color }}">
+                            <div class="card__poster">
+                                <img src="{{ card.img }}" alt="">
+                            </div>
+                            <div class="card__in">
+                                <div class="card__channel">
+                                    <span class="n-channel channel_{{ card.color }}">{{ mixins.icon('star') }}</span> {{ card.channel }}
+                                </div>
+                                <div class="card__title js-ellip">{{ card.title }}</div>
+                                <div class="card__about">
+                                    <p class="js-ellip">{{ card.genre }}</p>
+                                    <p class="js-ellip">{{ card.country }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="more">
+                <a href="#" class="n-btn">Вся телепрограмма</a>
+            </div>
+        </div>
+    </div>
+    {# partners #}
+    <div class="partners">
+        <div class="partners__section">
+            <div class="partners__title">Смотрите онлайн</div>
+            <div class="partners__list">
+                <a href="#" class="partners__item">
+                    <img src="img/partner1.png" alt="">
+                </a>
+                <a href="#" class="partners__item">
+                    <img src="img/partner2.png" alt="">
+                </a>
+                {# add class 'white' if logo image is white, becouse filter isn't work #}
+                <a href="#" class="partners__item white">
+                    <img src="img/partner3.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="partners__section">
+            <div class="partners__title">Спутниковое ТВ</div>
+            <div class="partners__list">
+                <a href="#" class="partners__item">
+                    <img src="img/logo.png" height="44" alt="">
+                </a>
+                <a href="#" class="partners__item">
+                    <img src="img/partner4.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="more">
+            <a href="#" class="n-btn n-btn_blue">Другие операторы</a>
+        </div>
+    </div>
+{% endblock %}

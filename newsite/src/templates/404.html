@@ -1,0 +1,56 @@
+---
+title: Page not found
+channels:
+- img: img/channel1.png
+- img: img/channel2.png
+- img: img/channel3.png
+- img: img/channel4.png
+- img: img/channel5.png
+- img: img/channel6.png
+- img: img/channel7.png
+- img: img/channel8.png
+- img: img/channel9.png
+- img: img/channel10.png
+- img: img/channel11.png
+- img: img/channel12.png
+---
+
+{% extends "./layouts/_layout.html" %}
+
+{% block content %}
+    <div class="container old">
+        <div class="error">
+            <div class="error__img">
+                <img src="img/error.png" alt="">
+            </div>
+            <div class="error__content">
+                <div class="error__title">Страница не найдена</div>
+                <p>Скорее всего, это случилось по одной из следующих причин: страница переехала, страницы больше нет или Вам просто нравится изучать 404 страницы</p>
+                <div class="error__links">
+                    <a href="#" class="btn btn_blue">ВЕРНУТЬСЯ НАЗАД</a>
+                    <span>или</span>
+                    <a href="#" class="btn btn_blue">ВПЕРЕЙТИ НА ГЛАВНУЮ</a>
+                </div>
+            </div>
+        </div>
+        {# section #}
+        <div class="section section_channels">
+            <div class="center">
+                <div class="n-channels">
+                    <div class="n-channels__row js-channels2">
+                        {% for channel in channels %}
+                            <div class="n-channels__item"><a href="#" class="n-channels__link"><img href="#" src="{{ channel.img }}" class="n-channels__logo"></a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+

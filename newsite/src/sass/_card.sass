@@ -1,0 +1,84 @@
+.card
+	position: relative
+	color: #000
+	.card__poster
+		position: relative
+		overflow: hidden
+		margin: 0 13px
+		img
+			display: block
+			width: 100%
+	.card__in
+		position: relative
+		padding: 15px 25px 0
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			height: 55px
+			width: 1px
+			background: rgba(#e6e6e6, .5)
+		+r(1024)
+			padding: 15px 15px 0
+		+r(768)
+			border: none
+	.card__channel
+		margin-bottom: 20px
+		font-size: 12px
+		.channel
+			margin-right: 15px
+	.card__row
+		+clr
+	.card__left
+		float: left
+		width: 70%
+	.card__right
+		float: right
+		width: 30%
+		text-align: center
+	.card__title
+		font-size: 16px
+		font-weight: bold
+	.card__genre
+		// padding-right: 1px
+		// padding-left: 1px
+		margin-bottom: 10px
+		font-size: 14px
+		font-style: italic
+	.card__time
+		font-size: 18px
+		font-weight: 500
+	.card__date
+		font-size: 12px
+	.card__about
+		// padding-right: 1px
+		// padding-left: 1px
+		padding-top: 5px
+		color: #7f7f7f
+		font-size: 12px
+		font-style: italic
+	&.card_white
+		color: #fff
+		.card__flag
+			display: none
+	&.card_backface
+		box-shadow: 0px -28px 0px -21px rgba(201, 214, 219, 0.8), 0px -42px 0px -28px rgba(#eaeff1, 0.8), 0px -56px 0px -37px #f4f6f7
+	&.card_time
+		.card__poster
+			padding: 0
+		.card__title
+			font-size: 14px
+	@for $i from 1 through length($channels)
+		&.card_#{nth($channels, $i)}
+			.card__flag
+				position: absolute
+				top: -30px
+				right: -25px
+				width: 100px
+				height: 50px
+				transform: rotate(30deg)
+				background: nth($colors, $i)
+			.card__channel
+				.n-channel
+					color: nth($colors, $i)

@@ -1,0 +1,340 @@
+// common styles
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,400italic,500,700,300italic&subset=latin,cyrillic)
+=f
+	font-family: Roboto, Arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
++font(GothamPro-Medium, GothamPro-Medium)
+=fg
+	font-family: "GothamPro-Medium", Roboto, Arial, sans-serif
+//colors
+$blue: #00acd3
+$cl: #353535
+$border: #e0e0e0
+// channel colors
+$explore: #ab0621
+$action: #ab0621
+$premium: #523796
+$megahit: #3581bb
+$nature: #72811a
+$russ: #00b3de
+$tv1000: #164b71
+$sport: #1c3d6c
+$history: #2f71b4
+$comedy: #d46b28
+
+$channels: explore action premium megahit nature russ tv1000 sport history comedy
+$colors: #ab0621 #ab0621 #523796 #3581bb #72811a #00b3de #164b71 #1c3d6c #2f71b4 #d46b28
+
+$orange: #d46b28
+$violet: #6d57a5
+$red: #b11a1b
+$green: #637824
+
+// old version colors
+$black: #000
+$dark: #353535
+// TV1000
+$tv: #08477b
+$tv-h: #1f7aad
+// TV1000 PREMIUM HD
+$premium: #352361
+$premium-h: #6d57a5
+// TV1000 MEGAHIT HD
+$megahit: #005196
+$megahit-h: #0971ca
+// TV1000 COMEDY HD
+$comedy: #d46b28
+$comedy-h: #fc8b2f
+// TV1000 ACTION
+$action: #8a0912
+$action-h: #d00847
+// TV1000 РУССКОЕ КИНО
+$rus: #005475
+$rus-h: #00b7e4
+// VIASAT EXPLORE, VIASAT EXPLORE HD
+$explore: #a8070e
+$explore-h: #d80e17
+// VIASAT HISTORY, VIASAT HISTORY HD
+$history: #1a539e
+$history-h: #53a1d8
+// VIASAT NATURE, VIASAT NATURE HD
+$nature: #637824
+$nature-h: #bccc32
+// VIASAT SPORT
+$sport: #005475
+$sport-h: #00b7e4
+html
+	font-size: 10px
+	+r(800)
+		font-size: 9px
+body
+	+f
+	font-size: 1.4rem
+	line-height: 1.3
+	color: $cl
+	&.no-scroll
+		overflow: hidden
+		.header
+			z-index: 1
+		.sidebar
+			z-index: 666
+		.main
+			z-index: 5
+	&.no-scroll.show-gallery
+		.sidebar
+			z-index: 4 
+button,
+input,
+textarea
+	+f
+	font-size: 14px
+button
+	background: none
+a
+	text-decoration: none
+	color: $blue
+
+.center
+	max-width: 1250px
+	margin: 0 auto
+	padding: 0 50px
+	+r(1024)
+		padding: 0 30px
+	+r(768)
+		padding: 0 20px
+	+r(568)
+		padding: 0 15px
+
+// text ellipsis
+.ellip
+	text-indent: 1px
+	padding-left: 1px
+	padding-right: 1px
+	display: block
+	height: 100%
+
+.ellip-line
+	display: inline-block
+	vertical-align: middle
+	text-overflow: ellipsis
+	white-space: nowrap
+	word-wrap: normal
+	max-width: 100%
+
+.ellip, .ellip-line
+	position: relative
+	overflow: hidden
+
+
+//grid
+.row
+	margin: 0 -15px
+	font-size: 0px
+	+clr
+	[class*="col-"]
+		float: left
+		padding: 0 15px
+		vertical-align: top
+	[class*="col"]
+		vertical-align: top
+	div, a, p
+		font-size: 1.4rem
+.col-20
+	width: 20%
+.col-25
+	width: 25%
+.col-33
+	width: 33.33%
+.col-50
+	width: 50%
+.col-75
+	width: 75%
+
+
+.icon
+	fill: currentColor
+
+// channels
+.n-channel
+	display: inline-block
+	vertical-align: middle
+	margin-right: 15px
+	font-size: 16px
+	color: #fff
+	@for $i from 1 through length($channels)
+		&.n-channel_#{nth($channels, $i)}
+			color: #{nth($colors, $i)}
+
+.n-btn
+	height: 55px
+	padding: 0 30px
+	background: #f8b636
+	border-radius: 5px
+	transition: background 200ms, color 200ms, border-color 200ms
+	color: #fff
+	font-size: 19px
+	border: 2px solid #f8b636
+	&:hover
+		background: darken(#f8b636, 5%)
+	&.n-btn_white
+		background: #fff
+		color: #979292
+		border: 2px solid #979292
+		&:hover
+			color: #b11226
+			border-color: #b11226
+	&.n-btn_small
+		height: 44px
+	&.n-btn_blue
+		background: #44a3d8
+		border-color: #44a3d8
+		&:hover
+			background: darken(#44a3d8, 5%)
+			border-color: darken(#44a3d8, 5%)
+	&.n-btn_transparent
+		background: transparent
+		border-color: #979292
+		color: #979292
+		&:hover
+			background: #979292
+			color: #fff
+a.n-btn
+	text-decoration: none
+	display: inline-block
+	line-height: 51px
+	&.n-btn_small
+		line-height: 40px
+.more
+	text-align: center
+	padding-top: 40px
+
+select
+	width: 100%
+.reset, .apply
+	padding: 5px 15px
+	border-radius: 3px
+	color: #fff
+	background: $violet
+	transition: background 200ms
+	&:hover
+		background: darken($violet, 5%)
+.apply
+	margin-bottom: 5px
+
+
+// heading
+.n-title
+	margin-bottom: 30px
+	+fg
+	font-size: 36px
+	text-align: center
+	&.title_white
+		color: #fff
+	+r(1024)
+		font-size: 30px
+	+r(768)
+		font-size: 26px
+.headtitle
+	margin-bottom: 10px
+	color: #fff
+	font-size: 24px
+	font-weight: 300
+	text-transform: uppercase
+	strong
+		font-weight: 500
+.n-h1
+	color: #fff
+	font-size: 36px
+	font-weight: 900
+	text-shadow: 1px 1px 0px rgba(0,0,0,.6)
+	&.n-h1_white
+		color: #fff
+	+r(768)
+		font-size: 32px
+	+r(480)
+		font-size: 30px
+.n-h2
+	margin-bottom: 25px
+	color: #222121
+	font-size: 30px
+	font-weight: 300
+	text-shadow: 0 1px 1px rgba(72, 54, 110, 0.75)
+	&.n-h2_white
+		color: #fff
+	+r(480)
+		padding: 0 10px
+	+r(414)
+		padding: 0
+.n-h3
+	margin-bottom: 20px
+	font-size: 24px
+	font-weight: 300
+	color: #222121
+	&.n-h3_white
+		color: #fff
+	+r(480)
+		padding: 0 10px
+	+r(414)
+		padding: 0
+.n-h4
+	font-size: 20px
+	margin-bottom: 20px
+	color: #353535
+	font-weight: 700
+	&.n-h4_white
+		color: #fff
+
+.scrolltop
+	// display: none
+	position: fixed
+	top: 20px
+	left: 50%
+	margin-left: -103px
+	width: 206px
+	height: 48px
+	border-radius: 3px
+	background-color: #f8b636
+	padding: 0 10px 0 50px
+	font-weight: 700
+	color: rgba(#fff, 0.7)
+	transform: translateY(-68px)
+	opacity: 0
+	transition: transform 200ms, opacity 200ms
+	z-index: 99
+	&.visible
+		opacity: 1
+		transform: translateY(0)
+	.icon-top
+		position: absolute
+		top: 18px
+		left: 18px
+		font-size: 8px
+	// +r(768)
+	// 	display: block
+.feedback
+	font-size: 0
+	.feedback-link
+		display: block
+		height: 60px
+		padding: 20px 30px
+		background: #f5f5f5 url("../img/subscr.png") right bottom no-repeat
+		font-size: 18px
+		font-weight: 700
+		color: #353535
+	.subscribe-link
+		display: block
+		height: 60px
+		padding: 20px 30px
+		background: #fff url("../img/feedback.png") right bottom no-repeat
+		font-size: 18px
+		font-weight: 700
+		color: #353535
+.share
+	img
+		display: block
+		max-width: 100%
+	
+.container
+	overflow: hidden		
